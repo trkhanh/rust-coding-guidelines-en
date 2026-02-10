@@ -1,38 +1,33 @@
-# 1. 概述
+# 1. Overview
 
-## 状态
+## Status
 
-- 《Rust 编码规范》目前为 V 1.0 beta 试行版，改进内容参考 [Changelog](./Changelog.md)
+- *The Rust Coding Standards* is currently at **V1.0 beta trial version**. For improvements, refer to the [Changelog](./Changelog.md).
 
-## 详细
+## Details
 
-- [1.1 为什么需要 Rust 编码规范](./overview/why.md)
-- [1.2 编码规范基本约定](./overview/convention.md)
+- [1.1 Why Rust Coding Standards are Needed](./overview/why.md)
+- [1.2 Basic Conventions of the Coding Standards](./overview/convention.md)
 
-## 介绍
+## Introduction
 
-Rust 语言社区内其实分散着很多编码规范，下面罗列一部分公开信息：
+Within the Rust language community, there are actually many dispersed coding standards. Below is a partial list of publicly available information:
 
-- [官方｜Rust API 编写指南](https://rust-lang.github.io/api-guidelines/about.html)
-- [官方 | Rust Style Guide](https://github.com/rust-dev-tools/fmt-rfcs/blob/master/guide/guide.md)
+- [Official | Rust API Guidelines](https://rust-lang.github.io/api-guidelines/about.html)
+- [Official | Rust Style Guide](https://github.com/rust-dev-tools/fmt-rfcs/blob/master/guide/guide.md)
 - [Rust's Unsafe Code Guidelines Reference](https://rust-lang.github.io/unsafe-code-guidelines/)
-- [法国国家信息安全局 | Rust 安全（Security）规范](https://anssi-fr.github.io/rust-guide)
-- [Apache Teaclave 安全计算平台 | Rust 开发规范](https://teaclave.apache.org/docs/rust-guildeline/)
-- [PingCAP | 编码风格指南（包括 Rust 和 Go 等）](https://github.com/pingcap/style-guide)
-- [Google Fuchsia 操作系统 Rust 开发指南](https://fuchsia.dev/fuchsia-src/development/languages/rust)
-- [RustAnalyzer 编码风格指南](https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/dev/style.md)
-- [使用 Rust 设计优雅的 API](https://deterministic.space/elegant-apis-in-rust.html)
-- [Rust FFI 指南](https://michael-f-bryan.github.io/rust-ffi-guide/)
+- [French National Cybersecurity Agency (ANSSI) | Rust Security Guidelines](https://anssi-fr.github.io/rust-guide)
+- [Apache Teaclave Secure Computing Platform | Rust Development Guidelines](https://teaclave.apache.org/docs/rust-guideline/)
+- [PingCAP | Style Guide (including Rust, Go, etc.)](https://github.com/pingcap/style-guide)
+- [Google Fuchsia Operating System Rust Development Guide](https://fuchsia.dev/fuchsia-src/development/languages/rust)
+- [RustAnalyzer Coding Style Guide](https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/dev/style.md)
+- [Designing Elegant APIs in Rust](https://deterministic.space/elegant-apis-in-rust.html)
+- [Rust FFI Guide](https://michael-f-bryan.github.io/rust-ffi-guide/)
 
-上面这些除了 Rust 官方和法国国家信息安全局的编码规范之外，其他开源项目的编码规范主要是为了规范贡献者们遵循一个统一的编码风格。
+Aside from the Rust official guidelines and those from the French National Cybersecurity Agency, the coding standards of other open-source projects listed above are primarily intended to standardize contributors to follow a unified coding style.
 
-所以，一个通用的，覆盖编码风格和具体编码实践的全面的编码规范，更有助于社区各个开源项目和各大公司参考去制定自己的编码规范。
+Therefore, a comprehensive, general coding standard that covers both coding style and specific coding practices would be more helpful for various open-source projects and companies within the community to reference when formulating their own standards.
 
 ![org](./img/org.png)
 
-本规范致力于成为统一的 Rust 编码规范，各大公司可以依赖本规范，结合自己的业务领域和团队习惯，形成自己的编码规范，并可以在日常实践中反哺本规范，让本规范更加完善。
-
-
-
-
-
+This standard aims to become a unified Rust coding standard. Companies can rely on this standard, combine it with their specific business domains and team habits to form their own coding standards, and can contribute back to this standard through daily practice, making it more complete.

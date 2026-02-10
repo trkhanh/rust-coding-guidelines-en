@@ -1,4 +1,5 @@
-# 2. 代码风格
+# 2. Code Style
 
-代码风格包含标识符的命名风格、排版与格式风格、注释风格等。一致的编码习惯与风格，可以提高代码可读性和可维护性。
+Code style encompasses naming conventions for identifiers, layout and formatting styles, documentation/commenting styles, and more. Consistent coding habits and styles significantly enhance code readability and maintainability.
 
+---

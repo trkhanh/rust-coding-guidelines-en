@@ -17,7 +17,7 @@ max-level = 2
 command = "mdbook-mermaid"
 
 [output.html]
-git-repository-url = "https://github.com/Rust-Coding-Guidelines/rust-coding-guidelines-zh"
+git-repository-url = "https://github.com/trkhanh/rust-coding-guidelines-en"
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.fold]

@@ -1,25 +1,30 @@
-## V 0.2 评审版本发布
+## V 0.2 Review Version Release
 
-任何事情如果想做到恰到好处，都需要一个进化的过程。编码规范也不例外。
+Achieving excellence is an evolutionary process, and coding standards are no exception.
 
-1. 统一了规范的文本格式与措辞。
-2. 经过考量，将一些原则变为了规则，并增加了自定义lint的说明。
-3. 删除了一些不需要放到规范中条目。
-4. 为一些规则丰富和精简了很多代码示例。
-5. 移除规范中引用的不符合`MIT/Apache/Mozilla public licenses` 的开源配置和代码示例。
+1. **Standardized text formatting and terminology** across the entire specification.
+2. **Transformed several principles into enforceable rules** after careful evaluation and added documentation for custom lints.
+3. **Removed redundant items** that were deemed unnecessary for a formal specification.
+4. **Refined code examples**, enriching some for clarity while streamlining others for conciseness.
+5. **Removed references to open-source configurations and code examples** that did not comply with `MIT/Apache/Mozilla public licenses`.
 
-## V 0.3 发布
+---
 
-改进：
+## V 0.3 Release
 
-- 将当前无法使用 Clippy 检查的规则（G）统一修改为了原则（P）
-- 删除和修复一些条款
-- 新增 信息安全 `P.SEC.01` 条款
+**Improvements:**
 
+* **Categorization:** Reclassified rules that cannot currently be checked by Clippy from "Rules" (G) to "Principles" (P).
+* **Cleanup:** Deleted and repaired several specific clauses.
+* **Security:** Added a new Information Security clause: `P.SEC.01`.
 
-## V 1.0 beta 发布
+---
 
-改进：
+## V 1.0 beta Release
 
-- 更新目录结构
-- 对文字和代码整体做了一遍评审，改进文字描述和代码格式
+**Improvements:**
+
+* **Restructuring:** Updated the overall directory and table of contents structure.
+* **Comprehensive Review:** Conducted a full review of all text and code, improving descriptive clarity and code formatting standards.
+
+---

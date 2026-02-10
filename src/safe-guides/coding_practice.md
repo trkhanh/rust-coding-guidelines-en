@@ -1,3 +1,5 @@
-# 3. 编程实践
+# 3. Programming Practices
 
-编码实践相关原则和规则，有助于编写更地道更安全的 Rust 代码。
+This section covers the principles and rules regarding coding practices, which help in writing more idiomatic and secure Rust code.
+
+---

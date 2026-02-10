@@ -1,62 +1,46 @@
-# 1.1 为什么需要 Rust 编码规范
+# 1.1 Why We Need Rust Coding Guidelines
 
-## 前言
+## Foreword
 
-在刚学 Rust 的时候，我赞叹于 Rust 提供的工具之先进性。比如 rustfmt，可以自动格式化代码，clippy 可以帮助你规范代码中写的不地道的地方。它们确实是非常优秀的工具。当时我也认为 Rust 根本不需要像其他语言那样制定编码规范。
+When first learning Rust, I was amazed by the advanced nature of its tooling. Tools like `rustfmt` automatically format code, and `clippy` helps standardize unidiomatic patterns. They are truly excellent tools. At the time, I believed Rust had no need for formal coding guidelines like other languages.
 
-但随着对 Rust 越来越深入了解的过程中，我也逐渐发现这些工具的很多不足之处，覆盖的并不全面。比如 rustfmt 配置和使用不当会导致代码错误，而且无法识别 Rust 代码中各种命名的语义；clippy存在一些误报或lint不合理，以及无法覆盖到 Unsafe Rust 等问题。开发者，尤其是新手们，如果长期像使用一个黑盒一样去依赖rustfmt和clippy，但并不去了解其lint背后的原因，只是知其然而无法知其所以然，那在代码质量有一定要求的前提下是无法提升开发效率的。
+However, as I delved deeper into Rust, I discovered many shortcomings in these tools; their coverage is not comprehensive. For instance, improper configuration or use of `rustfmt` can lead to code errors, and it cannot recognize the semantics of various names in Rust code. `clippy` suffers from false positives or irrational lints, and it fails to cover areas like Unsafe Rust. If developers—especially beginners—depend on these tools as a "black box" without understanding the reasoning behind the lints, they will struggle to improve development efficiency when high code quality is required.
 
-所以，rutfmt和clippy并不是万能的。我们还需要一个全面且通用的编码规范，并且也能覆盖到像 rustfmt 和 clippy 这样的工具，让广大 Rust 团队通过规范化的原则和规则去了解编写地道 Rust 代码的基本框架，就可以快速落地 Rust ，增强团队间的协作与信任。
+Therefore, `rustfmt` and `clippy` are not panaceas. We still need a comprehensive and universal coding specification that encompasses these tools. By providing standardized principles and rules, we can help Rust teams understand the fundamental framework for writing idiomatic code, enabling rapid adoption and strengthening collaboration and trust between teams.
 
-## Rustfmt 和 Clippy 的局限性
+## Limitations of Rustfmt and Clippy
 
-### Rustfmt 局限性
+### Limitations of Rustfmt
 
-Rust 有自动化格式化工具 rustfmt ，可以帮助开发者摆脱手工调整代码格式的工作，提升生产力。但它并不能代替编码规范对 Rust 代码的编码风格进行规范。
+While `rustfmt` boosts productivity by eliminating manual formatting, it cannot replace a coding specification for defining Rust's overall coding style.
 
-rustfmt主要存在以下缺陷：
+Its primary deficiencies include:
 
-1. Rust 语言是一门非常注重语义的语言。Rust 中的变量、类型和函数等命名是非常讲究语义的，尤其是所有权语义。rustfmt 工具无法判断代码中命名的语义。这方面利用 Clippy 可以满足部分需求，但是对于开发者来说比较片面。
-2. Rustfmt 如果使用不当或配置不当，会导致问题。因为rustfmt是自动格式化工具，它会自动修改代码，但是它修改的时候并不会编译代码。如果开发者配置自动保存以后自动执行rustfmt，就会导致代码被修改错误，或者，有一些rustfmt 配置选项配置错误，也可能导致代码修改错误。
-3. rustfmt 工具中的配置项都比较零散，大部分开发者不会去了解其每一个配置项的含义。
-4. rustfmt 没有覆盖到代码注释和文档注释的编码规范。
+1. **Semantic Blindness:** Rust is a language that emphasizes semantics. Naming variables, types, and functions requires careful semantic consideration, especially regarding ownership. `rustfmt` cannot judge naming semantics. While `clippy` addresses some of this, its coverage remains fragmentary for developers.
+2. **Configuration Risks:** Improper use or configuration can lead to issues. Since `rustfmt` modifies code without compiling it, features like "format on save" or incorrect settings can result in corrupted or erroneous code modifications.
+3. **Fragmented Settings:** Most developers do not understand the implications of every scattered configuration option.
+4. **Documentation Gaps:** `rustfmt` does not cover standards for code comments and documentation.
 
-综上所述，需要通过提供一个通用的编码规范，让开发者明确地从命名、格式和注释三方面整体上了解 Rust 遵循什么样的编码风格。其中会覆盖 rustfmt 的内容，但并不是机械地将 rustfmt 的规则都一一提取出来，而是对 rustfmt 的规则进行了统一的归类和梳理，方便开发者去理解 rustfmt 中制定的规则，方便团队去制定适合自己的代码风格。
+To address these, a universal specification is needed to provide a holistic view of naming, formatting, and comments. This specification organizes `rustfmt` rules into logical categories to help teams establish their own styles rather than just mechanically extracting tool settings.
 
-### Clippy 的局限性
+### Limitations of Clippy
 
-Clippy是 Rust 的 linter，是 Rust 生态系统中的主要组件之一。它对已开发的代码执行额外的静态检查，报告发现的问题并解释如何修复它们（有时它甚至可以自动修复它们）。使用它能对 Rust 初学者甚至专业人士都带来好处。
+As the primary linter in the Rust ecosystem, `clippy` provides essential static checks and explains how to fix issues. However, it is not a substitute for coding guidelines due to several flaws:
 
-但使用 Clippy 并不是意味着它能代替编码规范，它也存在很多缺陷：
+1. **Unsafe Rust Gaps:** `clippy` lacks many lint checks for Unsafe Rust. Since Unsafe Rust is a critical component, a dedicated specification is required to help developers write safe "unsafe" code.
+2. **Information Overload:** With over 500 lints (and growing), it is impossible for developers to learn them all individually. A specification helps categorize and organize these lints.
+3. **Controversial Recommendations:** The grading of lints (allow/warning/deny) is often debated. Some "allow" lints may be problematic in specific contexts, while some "warning" lints may be perfectly reasonable. This inconsistency led to projects like [noisy-clippy](https://github.com/dtolnay/noisy-clippy) to analyze how many recommendations fail to fit real-world scenarios.
 
-1. Clippy 缺乏很多  Unsafe Rust 相关的 lint 检测。Unsafe Rust 是 Rust 非常重要的一部分，需要一个完整的编码规范来覆盖，帮助开发者编写安全的 Unsafe 代码。
-2. Clippy 中的 lint 截止目前有 500多条，而且还有不断增长的趋势，开发者不可能一条条去了解每个 lint，所以需要一个编码规范帮助开发者对lint进行一个梳理归类。
-3. Clippy 中的lint 的建议和分级 （allow/warning/deny）有些争议。其中有些 lint 默认是 allow，但不代表在一些场景下，它就是合理的写法；同样，有些 lint 是 warning，但不代表在一些场景下是不合理的。为此，dtolnay 还特意创造了这个仓库：[https://github.com/dtolnay/noisy-clippy](https://github.com/dtolnay/noisy-clippy) ，用于分析社区中crate有多少 Clippy lint 的建议并不符合实际场景，从而达到改进 Clippy 的目的。
+## The Role of Coding Guidelines
 
-综上所述，Clippy 虽然是一个十分有用的工具，但它无法替代编码规范。
+The Rust Coding Guidelines serve the following purposes:
 
-## 编码规范作用
+1. **Quality Improvement:** Adhering to Rust's language features to enhance readability, maintainability, robustness, and portability.
+2. **Safety in Unsafe Rust:** Standardizing the writing of Unsafe Rust to improve security.
+3. **Efficiency:** Providing systematic, easy-to-apply, and easy-to-check clauses to help developers work faster.
+4. **Proactive Development:** Giving developers a global vision so they follow good practices *during* development, rather than fixing warnings line-by-line after the fact.
+5. **Knowledge Gap Coverage:** While not a textbook, the specification covers areas where knowledge gaps might lead to program errors, ensuring quality across teams with varying skill levels.
 
-Rust 编码规范的作用主要是如下方面：
+---
 
-1. 遵循 Rust 语言特性，提高代码的可读性、可维护性、健壮性和可移植性。
-2. 提高 Unsafe Rust 代码编写的规范性和安全性。
-3. 编程规范条款力争系统化、易应用、易检查，帮助开发者提升开发效率。
-4. 给开发者一个明确的且全局的视野，在其开发代码的过程中就能遵循好的代码规范，而非等写完代码以后再通过rustfmt和clippy这类的工具，一条一条去修改warning。
-5. 规范不等于教程，但是开发人员水平参差不齐，对于一些因为知识盲点而可能导致程序错误的地方，规范也将覆盖到。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Would you like me to translate the specific limitations found in the Unsafe Rust section next?**

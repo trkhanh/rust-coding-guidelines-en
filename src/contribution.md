@@ -1,9 +1,11 @@
-# 贡献者指南
+# Contributor Guide
 
-目前项目处于初期，先以 issues 提建议为主，暂不支持 Pull Request。
+The project is currently in its early stages. We primarily welcome suggestions through **Issues**; **Pull Requests** are not supported at this time.
 
-等项目整体结构确定以后，再开始接受 Pull Request。
+Once the overall project structure has been finalized, we will begin accepting Pull Requests.
 
+---
 
-### 贡献名单
+### Contributor List
 
+Would you like me to help you draft an **Issue template** for contributors to use when submitting their suggestions?
