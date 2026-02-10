@@ -8,11 +8,11 @@
 
 `rustfmt` 提供三个配置项对不同的语言项进行格式化：
 
-- `brace_style` 配置项对应于大部分语言项，包括函数、结构体等，但是控制结构（`if / match`等）除外，默认值为`SameLineWhere`，代表左花括号与语言项定义保持同一行。
-- `where_single_line` 配置项对应于 `where` 语句，默认值是 `false`，表示 `where`语句的花括号是换行。
-- `control_brace_style` 配置项对应于控制结构（`if / match`等），默认值为`AlwaysSameLine`，表示左花括号与语言项定义保持同一行。
+- `brace_style` 配置项对应于大部分语言项，包括函数、结构体等，但是控制结构（`if / match`等）除外，Default值为`SameLineWhere`，代表左花括号与语言项定义保持同一行。
+- `where_single_line` 配置项对应于 `where` 语句，Default值是 `false`，表示 `where`语句的花括号是换行。
+- `control_brace_style` 配置项对应于控制结构（`if / match`等），Default值为`AlwaysSameLine`，表示左花括号与语言项定义保持同一行。
 
-所以，只需要使用 `rustfmt` 默认配置即可。
+所以，只需要使用 `rustfmt` Default配置即可。
 
 **【反例】**
 
@@ -62,7 +62,7 @@ where
 }
 ```
 
-流程控制倾向于默认使用 `AlwaysSameLine`，即，总在同一行。因为流程控制没有`where`子句。
+流程控制倾向于Default使用 `AlwaysSameLine`，即，总在同一行。因为流程控制没有`where`子句。
 
 如果设置 `brace_style = "AlwaysNextLine"`，则不符合：
 
@@ -116,7 +116,7 @@ where
 }
 ```
 
-流程控制倾向于默认使用 `AlwaysSameLine`，即，总在同一行。因为流程控制没有`where`子句。
+流程控制倾向于Default使用 `AlwaysSameLine`，即，总在同一行。因为流程控制没有`where`子句。
 
 ```rust
 // 符合
@@ -134,9 +134,9 @@ fn main() {
 
 | 对应选项                                                                                           | 可选值                  | 是否 stable | 说明                                           |
 | -------------------------------------------------------------------------------------------------- | ----------------------- | ----------- | ---------------------------------------------- |
-| [`brace_style`](https://rust-lang.github.io/rustfmt/?#brace_style)                                 | SameLineWhere （默认）  | No          | 应该与语言项保持同一行，但是 where 语句例外    |
+| [`brace_style`](https://rust-lang.github.io/rustfmt/?#brace_style)                                 | SameLineWhere （Default）  | No          | 应该与语言项保持同一行，但是 where 语句例外    |
 | [`brace_style`](https://rust-lang.github.io/rustfmt/?#brace_style)                                 | AlwaysNextLine          | No          | 应该在语言项的下一行                           |
 | [`brace_style`](https://rust-lang.github.io/rustfmt/?#brace_style)                                 | PreferSameLine          | No          | 总是优先与语言项保持同一行，where 语句也不例外 |
-| [`where_single_line`](https://rust-lang.github.io/rustfmt/?#where_single_line)                     | false（默认）           | No          | 强制将 `where` 子句放在同一行上                |
-| [`control_brace_style` in control-flow](https://rust-lang.github.io/rustfmt/?#control_brace_style) | AlwaysSameLine （默认） | No          | 总在同一行上，用于控制流程中默认值             |
+| [`where_single_line`](https://rust-lang.github.io/rustfmt/?#where_single_line)                     | false（Default）           | No          | 强制将 `where` 子句放在同一行上                |
+| [`control_brace_style` in control-flow](https://rust-lang.github.io/rustfmt/?#control_brace_style) | AlwaysSameLine （Default） | No          | 总在同一行上，用于控制流程中Default值             |
 | [`control_brace_style` in control-flow](https://rust-lang.github.io/rustfmt/?#control_brace_style) | ClosingNextLine         | No          | 用于控制流程中 else 分支在 if 分支结尾处换行   |

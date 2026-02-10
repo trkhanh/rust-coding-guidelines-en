@@ -4,6 +4,7 @@
 
 When first learning Rust, I was amazed by the advanced nature of its tooling. Tools like `rustfmt` automatically format code, and `clippy` helps standardize unidiomatic patterns. They are truly excellent tools. At the time, I believed Rust had no need for formal coding guidelines like other languages.
 
+
 However, as I delved deeper into Rust, I discovered many shortcomings in these tools; their coverage is not comprehensive. For instance, improper configuration or use of `rustfmt` can lead to code errors, and it cannot recognize the semantics of various names in Rust code. `clippy` suffers from false positives or irrational lints, and it fails to cover areas like Unsafe Rust. If developers—especially beginners—depend on these tools as a "black box" without understanding the reasoning behind the lints, they will struggle to improve development efficiency when high code quality is required.
 
 Therefore, `rustfmt` and `clippy` are not panaceas. We still need a comprehensive and universal coding specification that encompasses these tools. By providing standardized principles and rules, we can help Rust teams understand the fundamental framework for writing idiomatic code, enabling rapid adoption and strengthening collaboration and trust between teams.
@@ -42,5 +43,3 @@ The Rust Coding Guidelines serve the following purposes:
 5. **Knowledge Gap Coverage:** While not a textbook, the specification covers areas where knowledge gaps might lead to program errors, ensuring quality across teams with varying skill levels.
 
 ---
-
-**Would you like me to translate the specific limitations found in the Unsafe Rust section next?**

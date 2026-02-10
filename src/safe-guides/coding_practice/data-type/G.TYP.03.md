@@ -28,9 +28,9 @@ let foo: u32 = 5;
 let f = i16::try_from(foo).is_ok(); // 返回 false
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                  | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                  | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ------------------------------------------------------------------------------------------ | ------------- | ------------ | ---------- | --------- |
 | [checked_conversions](https://rust-lang.github.io/rust-clippy/master/#checked_conversions) | yes           | no           | pedantic   | allow     |
 

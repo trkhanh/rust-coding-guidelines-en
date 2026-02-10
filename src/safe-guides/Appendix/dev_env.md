@@ -51,7 +51,7 @@ Cargo 是 Rust 项目必不可少的包管理器，除此之外，它也是一�
 > 3. 可以用它生产项目的文档（依据文档注释）
 > 4. 可以用它运行单元测试（test）和基准测试（bench）
 > 5. 可以用它下载和管理crate依赖
-> 6. 可以用它分发软件包，默认分发到 [crates.io](http://crates.io/) 上面
+> 6. 可以用它分发软件包，Default分发到 [crates.io](http://crates.io/) 上面
 > 7. 可以为它编写插件，使用子命令的方式，扩展它的功能。
 
 Cargo 通过 Cargo.toml 配置文件来管理 crate。
@@ -120,13 +120,13 @@ Rust 安全警报数据库：[https://rustsec.org/](https://rustsec.org/)
 
 **Cargo Outdated**
 
-该插件可以检测依赖库是否有新版本可用。
+该插件可以Detection依赖库是否有新版本可用。
 
 更多细节：[https://github.com/kbknapp/cargo-outdated](https://github.com/kbknapp/cargo-outdated)
 
 **Cargo Deny**
 
-该插件可以检测依赖中的软件许可证（License），如果和开发者配置的不符合，则会拒绝使用该依赖。
+该插件可以Detection依赖中的软件许可证（License），如果和开发者配置的不符合，则会拒绝使用该依赖。
 
 更多细节：[https://github.com/EmbarkStudios/cargo-deny](https://github.com/EmbarkStudios/cargo-deny)
 
@@ -138,7 +138,7 @@ Cargo Deny Book： [https://embarkstudios.github.io/cargo-deny/](https://embarks
 
 ###  加速 Rustup
 
-我们需要指定 `RUSTUP_DIST_SERVER`（默认指向 https://static.rust-lang.org）和 `RUSTUP_UPDATE_ROOT` （默认指向https://static.rust-lang.org/rustup），这两个网站均在中国大陆境外，因此在中国大陆访问会很慢，需要配置成境内的镜像。
+我们需要指定 `RUSTUP_DIST_SERVER`（Default指向 https://static.rust-lang.org）和 `RUSTUP_UPDATE_ROOT` （Default指向https://static.rust-lang.org/rustup），这两个网站均在中国大陆境外，因此在中国大陆访问会很慢，需要配置成境内的镜像。
 
 以下` RUSTUP_DIST_SERVER` 和 `RUSTUP_UPDATE_ROOT` 可以组合使用。
 

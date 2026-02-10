@@ -142,9 +142,9 @@ fn main() {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | 是否可定制 |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | 是否可定制 |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | _ | no           | no           | _   | yes |
 

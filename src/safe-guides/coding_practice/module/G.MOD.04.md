@@ -52,9 +52,9 @@ src/
   lib.rs
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                          | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                                          | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | -------------------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [self_named_module_files](https://rust-lang.github.io/rust-clippy/master/#self_named_module_files) | yes           | no           | restriction | allow     |
 | [mod_module_files](https://rust-lang.github.io/rust-clippy/master/#mod_module_files)               | yes           | no           | restriction | allow     |

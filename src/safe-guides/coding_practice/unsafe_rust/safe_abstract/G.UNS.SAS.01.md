@@ -6,7 +6,7 @@
 
 在公开（pub）的 unsafe 函数文档中，必须增加 `# Safety` 注释来解释该函数的安全边界，这样使用该函数的用户才可以安全地使用它。
 
-说明： 该规则通过 cargo clippy 来检测。默认会发出警告。
+说明： 该规则通过 cargo clippy 来Detection。Default会发出警告。
 
 **【反例】**
 
@@ -44,8 +44,8 @@
     }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认 level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | Default level |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ---------- |
 | [missing_safety_doc](https://rust-lang.github.io/rust-clippy/master/index.html#missing_safety_doc) | yes           | no           | Style      | warn       |

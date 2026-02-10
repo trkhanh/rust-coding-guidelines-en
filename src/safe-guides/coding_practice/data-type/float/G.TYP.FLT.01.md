@@ -4,7 +4,7 @@
 
 **【描述】**
 
-当指定超过类型精度（`f32` 或 `f64`）的字面量值时，Rust 会默认截断该值。
+当指定超过类型精度（`f32` 或 `f64`）的字面量值时，Rust 会Default截断该值。
 
 **【反例】**
 
@@ -22,9 +22,9 @@ let v: f64 = 0.123_456_789_9;
 println!("{}", v); //  0.123_456_789_9
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                  | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                  | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ------------------------------------------------------------------------------------------ | ------------- | ------------ | ---------- | --------- |
 | [excessive_precision](https://rust-lang.github.io/rust-clippy/master/#excessive_precision) | yes           | no           | style      | warn      |
 

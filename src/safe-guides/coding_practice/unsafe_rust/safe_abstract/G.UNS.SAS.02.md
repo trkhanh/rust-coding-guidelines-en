@@ -43,9 +43,9 @@
     }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认 level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | Default level |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ---------- |
 | [debug_assert_with_mut_call](https://rust-lang.github.io/rust-clippy/master/index.html#debug_assert_with_mut_call) | yes           | no           | nursery    | allow      |
 

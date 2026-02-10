@@ -70,9 +70,9 @@ fn main() {
 ```
 
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | [shadow_reuse](https://rust-lang.github.io/rust-clippy/master/#shadow_reuse) | yes           | no           | restriction   | allow |
 | [shadow_same](https://rust-lang.github.io/rust-clippy/master/#shadow_same) | yes           | no           | restriction   | allow |

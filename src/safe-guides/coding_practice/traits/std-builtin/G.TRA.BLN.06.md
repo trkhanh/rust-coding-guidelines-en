@@ -42,9 +42,9 @@ pub fn format(&mut self) -> String {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                            | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                                            | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | ---------------------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [drop_copy](https://rust-lang.github.io/rust-clippy/master/#drop_copy)                               | yes           | no           | correctness | deny      |
 | [drop_ref](https://rust-lang.github.io/rust-clippy/master/#drop_ref)                                 | yes           | no           | correctness | deny      |

@@ -2,9 +2,9 @@
 
 **【描述】**
 
-对于自定义了判别式的枚举体，和有字段的结构体而言，默认只需要左对齐就可以。
+对于自定义了判别式的枚举体，和有字段的结构体而言，Default只需要左对齐就可以。
 
-这个宽度可以设置为任意值，但默认是`0`。
+这个宽度可以设置为任意值，但Default是`0`。
 
 > 说明：此宽度并不是指插入多少空格，而是指需要对齐的字符长度。
 
@@ -68,5 +68,5 @@ enum Bar {
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`enum_discrim_align_threshold`](https://rust-lang.github.io/rustfmt/?#enum_discrim_align_threshold) | 0（默认） | No|  具有判别式的枚举变体与其他变体进行垂直对齐的最大长度|
-| [`struct_field_align_threshold`](https://rust-lang.github.io/rustfmt/?#struct_field_align_threshold) | 0（默认） | No|  结构体字段垂直对齐的最大长度|
+| [`enum_discrim_align_threshold`](https://rust-lang.github.io/rustfmt/?#enum_discrim_align_threshold) | 0（Default） | No|  具有判别式的枚举变体与其他变体进行垂直对齐的最大长度|
+| [`struct_field_align_threshold`](https://rust-lang.github.io/rustfmt/?#struct_field_align_threshold) | 0（Default） | No|  结构体字段垂直对齐的最大长度|

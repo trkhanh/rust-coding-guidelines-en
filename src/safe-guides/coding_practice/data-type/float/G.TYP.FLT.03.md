@@ -54,9 +54,9 @@ fn payment(x: f64, y: f64) -> Result<f64, PaymentErr>{
 ```
 
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                                                | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | -------------------------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [float_arithmetic](https://rust-lang.github.io/rust-clippy/master/#float_arithmetic)                     | yes           | no           | restriction | allow     |
 | [float_cmp](https://rust-lang.github.io/rust-clippy/master/#float_cmp)                                   | yes           | no           | pedantic    | allow     |

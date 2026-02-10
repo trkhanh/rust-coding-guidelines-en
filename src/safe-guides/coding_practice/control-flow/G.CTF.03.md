@@ -24,9 +24,9 @@ let sad_people: Vec<&str> = vec![];
 assert!(sad_people.is_empty(), "there are sad people: {:?}", sad_people);
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                      | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                      | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ------------------------------------------------------------------------------ | ------------- | ------------ | ---------- | --------- |
 | [if_then_panic](https://rust-lang.github.io/rust-clippy/master/#if_then_panic) | yes           | no           | Style      | warn      |
 

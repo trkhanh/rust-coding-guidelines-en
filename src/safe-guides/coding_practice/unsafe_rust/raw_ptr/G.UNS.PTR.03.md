@@ -24,8 +24,8 @@ let _ = ptr.cast::<i32>(); // 符合
 let _ = mut_ptr.cast::<i32>(); // 符合
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认 level |
+| lint name                                                                | Clippy Detectable | Rustc Detectable | Lint Group  | Default level |
 | ------------------------------------------------------------------------ | ------------- | ------------ | ----------- | ---------- |
 | [ptr_as_ptr](https://rust-lang.github.io/rust-clippy/master/#ptr_as_ptr) | yes           | no           | correctness | deny       |

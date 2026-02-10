@@ -47,4 +47,4 @@ fn main() {
 
 | 对应选项                                                                   | 可选值        | 是否 stable | 说明                   |
 | -------------------------------------------------------------------------- | ------------- | ----------- | ---------------------- |
-| [`binop_separator`](https://rust-lang.github.io/rustfmt/?#binop_separator) | Front（默认） | No          | 换行后，操作符置于行首 |
+| [`binop_separator`](https://rust-lang.github.io/rustfmt/?#binop_separator) | Front（Default） | No          | 换行后，操作符置于行首 |

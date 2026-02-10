@@ -61,9 +61,9 @@ fn main() {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                                                                | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------- | ------------ | ----------- | --------- |
 | [as_conversions](https://rust-lang.github.io/rust-clippy/master/#as_conversions)                                         | yes           | no           | restriction | allow     |
 | [cast_lossless](https://rust-lang.github.io/rust-clippy/master/#cast_lossless)                                           | yes           | no           | pedantic    | allow     |

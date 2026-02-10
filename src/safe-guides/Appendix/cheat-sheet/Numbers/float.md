@@ -11,7 +11,7 @@ Rust 有  [IEEE 754](https://floating-point-gui.de/formats/fp/) 单精度  (32-b
 	let y: f64 = 0.1; // 64-bit float
 ```
 
-默认的浮点数类型是 `f64`:
+Default的浮点数类型是 `f64`:
 
 ```rust
 	let z = 0.1; // 64-bit float

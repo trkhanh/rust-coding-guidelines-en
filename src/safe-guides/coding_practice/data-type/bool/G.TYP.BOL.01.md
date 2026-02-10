@@ -29,9 +29,9 @@ if !y {}
 assert!(!"a".is_empty());
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                        | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                        | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ------------------------------------------------------------------------------------------------ | ------------- | ------------ | ---------- | --------- |
 | [bool_comparison](https://rust-lang.github.io/rust-clippy/master/#bool_comparison)               | yes           | no           | complexity | warn      |
 | [bool_assert_comparison](https://rust-lang.github.io/rust-clippy/master/#bool_assert_comparison) | yes           | no           | style      | warn      |

@@ -7,7 +7,7 @@
 
 **【描述】**
 
-Rust 中没有默认的构造函数，都是自定义构造函数。
+Rust 中没有Default的构造函数，都是自定义构造函数。
 
 如果需要多个构造函数，或者构造时需要很多可选配置的复杂场景，那么构建者模式是适合你的选择。
 
@@ -128,9 +128,9 @@ iter.flatten();
 let nums: Vec<i32> = ["1", "2", "whee!"].iter().filter_map(|x| x.parse().ok()).collect();
 
 ```
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | [explicit_counter_loop](https://rust-lang.github.io/rust-clippy/master/#explicit_counter_loop) | yes           | no           | complexity | warn  |
 | [filter_map_identity](https://rust-lang.github.io/rust-clippy/master/#filter_map_identity) | yes           | no           | complexity | warn  |

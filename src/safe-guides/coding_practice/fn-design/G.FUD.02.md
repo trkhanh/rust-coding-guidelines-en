@@ -30,15 +30,15 @@ struct TooLarge([u8; 2048]);
 fn foo(v: &TooLarge) {}
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                  | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                                  | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ---------------------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [large_types_passed_by_value](https://rust-lang.github.io/rust-clippy/master/#large_types_passed_by_value) | yes           | no           | pedantic   | allow     |
 
 该 lint 对应 `clippy.toml` 配置项：
 
 ```toml
-# 如果函数是被导出的 API，则该 lint 不会被触发，是防止 lint 建议对 API 有破坏性的改变。默认为 true
+# 如果函数是被导出的 API，则该 lint 不会被触发，是防止 lint 建议对 API 有破坏性的改变。Default为 true
 avoid-breaking-exported-api=true 
 ```

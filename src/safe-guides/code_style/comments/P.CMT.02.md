@@ -19,7 +19,7 @@
 
 当 `comment_width=80` 且 `wrap_comments=true`时。
 
-注意：这里 `wrap_comments`并未使用默认值，需要配置为 true。
+注意：这里 `wrap_comments`并未使用Default值，需要配置为 true。
 
 ```rust
 // 符合
@@ -34,5 +34,5 @@
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- |
-| [`comment_width`](https://rust-lang.github.io/rustfmt/?#comment_width) | 80（默认） | No|  指定一行注释允许的最大宽度 |
-| [`wrap_comments`](https://rust-lang.github.io/rustfmt/?#wrap_comments) | false（默认），true（建议） | No| 运行多行注释按最大宽度自动换成多行注释 |
+| [`comment_width`](https://rust-lang.github.io/rustfmt/?#comment_width) | 80（Default） | No|  指定一行注释允许的最大宽度 |
+| [`wrap_comments`](https://rust-lang.github.io/rustfmt/?#wrap_comments) | false（Default），true（建议） | No| 运行多行注释按最大宽度自动换成多行注释 |

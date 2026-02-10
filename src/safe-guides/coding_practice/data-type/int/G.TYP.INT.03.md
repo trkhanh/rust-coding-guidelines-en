@@ -33,9 +33,9 @@ fn main() {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                              | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                              | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | -------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [modulo_arithmetic](https://rust-lang.github.io/rust-clippy/master/#modulo_arithmetic) | yes           | no           | restriction | allow     |
 

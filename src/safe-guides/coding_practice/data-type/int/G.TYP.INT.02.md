@@ -32,13 +32,13 @@ fn main(){
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                        | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                        | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | -------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [cast_sign_loss](https://rust-lang.github.io/rust-clippy/master/#cast_sign_loss) | yes           | no           | pedantic   | allow     |
 
-注意：默认情况下该 lint 是` allow`，如果需要检查这种转换，则需要设置为 `warn`或 `deny`。
+注意：Default情况下该 lint 是` allow`，如果需要检查这种转换，则需要设置为 `warn`或 `deny`。
 
 
 ## 参考

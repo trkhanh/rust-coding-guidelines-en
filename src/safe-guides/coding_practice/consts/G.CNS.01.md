@@ -22,10 +22,10 @@ let x = std::f32::consts::PI; // 符合
 let y = std::f64::consts::FRAC_1_PI; // 符合
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------ | ---- | --------- | ------ | ------ | 
 | [approx_constant](https://rust-lang.github.io/rust-clippy/master/#approx_constant) | yes| no | Correctness | deny |
 
-该 Lint 默认为 `deny`，但在某些场景下，可以设置为`allow`，`#![allow(clippy::approx_constant)]`。
+该 Lint Default为 `deny`，但在某些场景下，可以设置为`allow`，`#![allow(clippy::approx_constant)]`。

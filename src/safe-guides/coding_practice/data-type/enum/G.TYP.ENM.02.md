@@ -31,7 +31,7 @@ pub type Infallible = !;
 
 **【例外】**
 
-因为 [`std::convert::Infallible`](https://doc.rust-lang.org/std/convert/enum.Infallible.html#) 默认实现了很多 trait，如果不想依赖其他 trait ，那么可以用 空枚举。
+因为 [`std::convert::Infallible`](https://doc.rust-lang.org/std/convert/enum.Infallible.html#) Default实现了很多 trait，如果不想依赖其他 trait ，那么可以用 空枚举。
 
 ```rust
 #![feature(never_type)] // 当启用该功能的时候，下面的clippy才会生效
@@ -46,9 +46,9 @@ impl Display for NoUserError {
 
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name                                                                | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------------------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | [empty_enum](https://rust-lang.github.io/rust-clippy/master/#empty_enum) | yes           | no           | pedantic   | allow |
 

@@ -9,7 +9,7 @@
     - 导入来自本地 `self`、`super`和`crate`前缀的模块，置于后面。
 3. 分组内使用字典序进行排序（`reorder_imports=true`）。
 
-> 说明： 默认 rustfmt 不会对导入的模块自动分组，而是保留开发者的导入顺序。所以，这里需要修改 rustfmt 默认配置，才能让rustfmt应用此规则，但因为这几个配置项暂时未稳定，所以需要在 Nightly 下使用。
+> 说明： Default rustfmt 不会对导入的模块自动分组，而是保留开发者的导入顺序。所以，这里需要修改 rustfmt Default配置，才能让rustfmt应用此规则，但因为这几个配置项暂时未稳定，所以需要在 Nightly 下使用。
 
 **【反例】**
 
@@ -27,7 +27,7 @@ use qux::{h, i};
 例2:
 
 ```rust
-// 不符合：当按默认值设置时，模块导入比较乱，影响可读性
+// 不符合：当按Default值设置时，模块导入比较乱，影响可读性
 use super::update::convert_publish_payload;
 use chrono::Utc;
 
@@ -83,6 +83,6 @@ use crate::models::Event;
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`imports_granularity`](https://rust-lang.github.io/rustfmt/?#imports_granularity) | （Preserve（默认），Crate(推荐)）| No | 默认保留开发者的模块导入顺序|
-| [`reorder_imports`](https://rust-lang.github.io/rustfmt/?#reorder_imports) | true（默认） | No| 模块分组内根据模块首字母按字典序进行排序 |
-| [`group_imports`](https://rust-lang.github.io/rustfmt/?#group_imports) | （Preserve（默认）， StdExternalCrate（建议）） | No| 默认保留开发者的模块导入分组 |
+| [`imports_granularity`](https://rust-lang.github.io/rustfmt/?#imports_granularity) | （Preserve（Default），Crate(推荐)）| No | Default保留开发者的模块导入顺序|
+| [`reorder_imports`](https://rust-lang.github.io/rustfmt/?#reorder_imports) | true（Default） | No| 模块分组内根据模块首字母按字典序进行排序 |
+| [`group_imports`](https://rust-lang.github.io/rustfmt/?#group_imports) | （Preserve（Default）， StdExternalCrate（建议）） | No| Default保留开发者的模块导入分组 |

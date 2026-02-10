@@ -51,5 +51,5 @@ pub enum Foo {}
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- |
-| [`normalize_comments`](https://rust-lang.github.io/rustfmt/?#normalize_comments) | false（默认） true（推荐） | No| 将 `/**/` 注释转为 `//`|
-| [`normalize_doc_attributes`](https://rust-lang.github.io/rustfmt/?#normalize_doc_attributes) | false（默认） | No| 将 `#![doc]` 和 `#[doc]` 注释转为 `//!` 和 `///` |
+| [`normalize_comments`](https://rust-lang.github.io/rustfmt/?#normalize_comments) | false（Default） true（推荐） | No| 将 `/**/` 注释转为 `//`|
+| [`normalize_doc_attributes`](https://rust-lang.github.io/rustfmt/?#normalize_doc_attributes) | false（Default） | No| 将 `#![doc]` 和 `#[doc]` 注释转为 `//!` 和 `///` |

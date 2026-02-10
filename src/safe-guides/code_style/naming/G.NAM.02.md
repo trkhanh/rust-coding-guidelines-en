@@ -64,8 +64,8 @@
 - [`Option::into_iter`](https://doc.rust-lang.org/std/option/enum.Option.html#method.into_iter)
 
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group | Lint Level |
+| lint name                                                                                                | Clippy Detectable | Rustc Detectable | Lint Group | Lint Level |
 | -------------------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | ---------- |
 | [wrong_self_convention](https://rust-lang.github.io/rust-clippy/master/index.html#wrong_self_convention) | yes           | no           | Style      | warn       |

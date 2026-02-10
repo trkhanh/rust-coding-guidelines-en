@@ -7,7 +7,7 @@
 
 **【反例】**
 
-当 rustfmt 配置型 `fn_args_layout` 和 `imports_layout` 未使用默认值：
+当 rustfmt 配置型 `fn_args_layout` 和 `imports_layout` 未使用Default值：
 
 ```rust
 trait Lorem {
@@ -46,7 +46,7 @@ use foo::{
 
 **【正例】**
 
-当 rustfmt 配置项 `fn_args_layout` 和 `imports_layout` 使用默认值时：
+当 rustfmt 配置项 `fn_args_layout` 和 `imports_layout` 使用Default值时：
 
 ```rust
 trait Lorem {
@@ -94,5 +94,5 @@ use foo::{
 
 | 对应选项                                                                 | 可选值        | 是否 stable | 说明                                               |
 | ------------------------------------------------------------------------ | ------------- | ----------- | -------------------------------------------------- |
-| [`fn_args_layout`](https://rust-lang.github.io/rustfmt/?#fn_args_layout) | Tall（默认）  | Yes         | 函数参数五个或以内可以一行，超过五个则使用块状缩进 |
-| [`imports_layout`](https://rust-lang.github.io/rustfmt/?#imports_layout) | Mixed（默认） | No          | 导入模块每行超过四个则换行                         |
+| [`fn_args_layout`](https://rust-lang.github.io/rustfmt/?#fn_args_layout) | Tall（Default）  | Yes         | 函数参数五个或以内可以一行，超过五个则使用块状缩进 |
+| [`imports_layout`](https://rust-lang.github.io/rustfmt/?#imports_layout) | Mixed（Default） | No          | 导入模块每行超过四个则换行                         |

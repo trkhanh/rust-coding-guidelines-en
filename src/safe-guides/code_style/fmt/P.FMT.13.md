@@ -7,7 +7,7 @@
 1. 省略字段名的时候需要注意变量名和字段名保持一致。
 2. 变量名和字段名不一致的情况下，不要省略字段名。
 
-> 注意：如果将 rustfmt 默认配置 `use_field_init_shorthand`改为`true`时，有可能会发生代码被修改错误的情况。
+> 注意：如果将 rustfmt Default配置 `use_field_init_shorthand`改为`true`时，有可能会发生代码被修改错误的情况。
 
 
 **【反例】**
@@ -53,4 +53,4 @@ fn main() {
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`use_field_init_shorthand`](https://rust-lang.github.io/rustfmt/?#use_field_init_shorthand) | false（默认） | Yes |具名结构体字段初始化不能省略字段名|
+| [`use_field_init_shorthand`](https://rust-lang.github.io/rustfmt/?#use_field_init_shorthand) | false（Default） | Yes |具名结构体字段初始化不能省略字段名|

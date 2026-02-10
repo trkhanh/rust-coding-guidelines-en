@@ -48,7 +48,7 @@ fn main(){
 ```rust
 #![allow(clippy::expect_fun_call]
 
-// 这个配置文件默认会跟随源码出现，所以，必定可以读取到
+// 这个配置文件Default会跟随源码出现，所以，必定可以读取到
 // 这个配置文件不应该没有被提供，如果万一出现了没有提供的情况，需要 Panic 并提供错误信息方便调试，或者让使用者知道原因
 let config = Config::read("some_config.toml").expect("Provide the correct configuration file"); 
 
@@ -61,9 +61,9 @@ let _home: IpAddr = "127.0.0.1".parse().expect("Provide the correct Ip addr");
 ```
 
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                          | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                          | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | ---------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [expect_fun_call](https://rust-lang.github.io/rust-clippy/master/#expect_fun_call) | yes           | no           | perf        | warn      |
 | [expect_used](https://rust-lang.github.io/rust-clippy/master/#expect_used)         | yes           | no           | restriction | allow     |

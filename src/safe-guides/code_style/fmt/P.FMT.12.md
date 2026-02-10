@@ -5,7 +5,7 @@
 1. 在声明宏中，模式匹配分支（`=>` 左侧）应该使用紧凑格式（`format_macro_matchers=true`）。
 2. 而分支代码体（`=>` 右侧） 使用宽松格式。
 
-> 说明：因为这里需要修改`format_macro_matchers`的默认值，且该配置项并未 Stable ，所以需要在 Nightly 下修改配置项的值以便使用。
+> 说明：因为这里需要修改`format_macro_matchers`的Default值，且该配置项并未 Stable ，所以需要在 Nightly 下修改配置项的值以便使用。
 
 **【反例】**
 
@@ -53,5 +53,5 @@ macro_rules! foo {
 
 | 对应选项                                                                               | 可选值                      | 是否 stable | 说明                                             |
 | -------------------------------------------------------------------------------------- | --------------------------- | ----------- | ------------------------------------------------ |
-| [`format_macro_matchers`](https://rust-lang.github.io/rustfmt/?#format_macro_matchers) | false（默认），true（建议） | No          | 声明宏 模式匹配分支（`=>` 左侧）中要使用紧凑格式 |
-| [`format_macro_bodies`](https://rust-lang.github.io/rustfmt/?#format_macro_bodies)     | true（默认）                | No          | 声明宏分支代码体（`=>` 右侧） 使用宽松格式       |
+| [`format_macro_matchers`](https://rust-lang.github.io/rustfmt/?#format_macro_matchers) | false（Default），true（建议） | No          | 声明宏 模式匹配分支（`=>` 左侧）中要使用紧凑格式 |
+| [`format_macro_bodies`](https://rust-lang.github.io/rustfmt/?#format_macro_bodies)     | true（Default）                | No          | 声明宏分支代码体（`=>` 右侧） 使用宽松格式       |

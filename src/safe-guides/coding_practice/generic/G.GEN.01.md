@@ -31,8 +31,8 @@ impl<T> Foo<T> {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------ | ---- | --------- | ------ | ------ | 
 | [builtin_type_shadow](https://rust-lang.github.io/rust-clippy/master/#builtin_type_shadow) | yes| no | style | warn |

@@ -41,8 +41,8 @@ let _ = res().map(|s| if s.len() == 42 { 10 } else { 20 });
 let _ = res().map_err(|s| if s.len() == 42 { 10 } else { 20 });
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                  | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                  | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ------------------------------------------------------------------------------------------ | ------------- | ------------ | ---------- | --------- |
 | [bind_instead_of_map](https://rust-lang.github.io/rust-clippy/master/#bind_instead_of_map) | yes           | no           | complexity | warn      |

@@ -44,9 +44,9 @@ Rust 倾向于在“类型”级的结构中使用大驼峰（`UpperCamelCase`�
 
 Rust 命名规范在 [RFC 0430](https://github.com/rust-lang/rfcs/blob/master/text/0430-finalizing-naming-conventions.md) 中有也描述。
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group |
+| lint name                                                                                                                | Clippy Detectable | Rustc Detectable | Lint Group |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------- | ------------ | ---------- |
 | [`Rustc: non_camel_case_types`](https://doc.rust-lang.org/rustc/lints/listing/warn-by-default.html#non-camel-case-types) | no            | yes          | Style      |
 | [`Rustc: non_snake_case`](https://doc.rust-lang.org/rustc/lints/listing/warn-by-default.html#non-snake-case)             | no            | yes          | Style      |

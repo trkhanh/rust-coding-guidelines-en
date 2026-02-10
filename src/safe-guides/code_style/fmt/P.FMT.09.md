@@ -78,7 +78,7 @@ fn lorem<Ipsum: Dolor + Sit = Amet>() {
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`space_after_colon`](https://rust-lang.github.io/rustfmt/?#space_after_colon) | true（默认） | No |  在冒号后面要加空格|
-| [`space_before_colon`](https://rust-lang.github.io/rustfmt/?#space_before_colon) | false（默认） | No| 在冒号前面不要加空格 |
-| [`spaces_around_ranges`](https://rust-lang.github.io/rustfmt/?#spaces_around_ranges) | false（默认） | No| 在`..`和`..=`范围操作符前后不要加空格 |
-| [`type_punctuation_density`](https://rust-lang.github.io/rustfmt/?#type_punctuation_density) | "Wide"（默认） | No| 在 `+`或`=`操作符前后要加空格（此处特指类型签名） |
+| [`space_after_colon`](https://rust-lang.github.io/rustfmt/?#space_after_colon) | true（Default） | No |  在冒号后面要加空格|
+| [`space_before_colon`](https://rust-lang.github.io/rustfmt/?#space_before_colon) | false（Default） | No| 在冒号前面不要加空格 |
+| [`spaces_around_ranges`](https://rust-lang.github.io/rustfmt/?#spaces_around_ranges) | false（Default） | No| 在`..`和`..=`范围操作符前后不要加空格 |
+| [`type_punctuation_density`](https://rust-lang.github.io/rustfmt/?#type_punctuation_density) | "Wide"（Default） | No| 在 `+`或`=`操作符前后要加空格（此处特指类型签名） |

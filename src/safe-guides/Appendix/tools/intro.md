@@ -1,6 +1,6 @@
 # E.工具链
 
-这里介绍一些检测工具，比如 Cargo fmt 和 Cargo Clippy.
+这里介绍一些Detection工具，比如 Cargo fmt 和 Cargo Clippy.
 
 
 

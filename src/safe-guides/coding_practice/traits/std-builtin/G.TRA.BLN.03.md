@@ -32,10 +32,10 @@ struct Foo {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                          | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                          | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ---------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [derivable_impls](https://rust-lang.github.io/rust-clippy/master/#derivable_impls) | yes           | no           | complexity | warn      |
 
-该lint不能用于检测泛型参数类型的 Default 手工实现。
+该lint不能用于Detection泛型参数类型的 Default 手工实现。

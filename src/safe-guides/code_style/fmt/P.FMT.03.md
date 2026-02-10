@@ -51,5 +51,5 @@ fn bar() {
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`blank_lines_lower_bound`](https://rust-lang.github.io/rustfmt/?#blank_lines_lower_bound) | 0（默认） | No| 不空行|
-|[`blank_lines_upper_bound`](https://rust-lang.github.io/rustfmt/?#blank_lines_upper_bound)| 1（默认）| No | 最大空一行|
+| [`blank_lines_lower_bound`](https://rust-lang.github.io/rustfmt/?#blank_lines_lower_bound) | 0（Default） | No| 不空行|
+|[`blank_lines_upper_bound`](https://rust-lang.github.io/rustfmt/?#blank_lines_upper_bound)| 1（Default）| No | 最大空一行|

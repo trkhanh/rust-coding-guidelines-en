@@ -2,11 +2,11 @@
 
 **【描述】**
 
-`rustfmt` 可以由 `condense_wildcard_suffixes` 配置项来格式化此规则，其默认选项是 false，表示不允许 解构元组的时候使用`..`来指代剩余元素，所以需要修改默认配置项的值为 `true` 才符合规范。
+`rustfmt` 可以由 `condense_wildcard_suffixes` 配置项来格式化此规则，其Default选项是 false，表示不允许 解构元组的时候使用`..`来指代剩余元素，所以需要修改Default配置项的值为 `true` 才符合规范。
 
 **【反例】**
 
-默认情况下，rustfmt 不会自动更改代码，会保留原来的写法。
+Default情况下，rustfmt 不会自动更改代码，会保留原来的写法。
 
 ```rust
 fn main() {
@@ -32,4 +32,4 @@ fn main() {
 
 | 对应选项                                                     | 可选值                      | 是否 stable | 说明                                         |
 | ------------------------------------------------------------ | --------------------------- | ----------- | -------------------------------------------- |
-| [`condense_wildcard_suffixes`](https://rust-lang.github.io/rustfmt/?#condense_wildcard_suffixes) | false（默认） true （推荐） | No          | 解构元组的时候是否允许使用`..`来指代剩余元素 |
+| [`condense_wildcard_suffixes`](https://rust-lang.github.io/rustfmt/?#condense_wildcard_suffixes) | false（Default） true （推荐） | No          | 解构元组的时候是否允许使用`..`来指代剩余元素 |

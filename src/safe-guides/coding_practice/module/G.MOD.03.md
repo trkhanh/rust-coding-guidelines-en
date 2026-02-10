@@ -32,10 +32,10 @@ use prelude::*;
 use super::*
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                            | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                            | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ------------------------------------------------------------------------------------ | ------------- | ------------ | ---------- | --------- |
 | [wildcard_imports](https://rust-lang.github.io/rust-clippy/master/#wildcard_imports) | yes           | no           | pedantic   | allow     |
 
-该 lint 可以通过 clippy 配置项 `warn-on-all-wildcard-imports = false` 来配置，用于是否禁用 `prelude`/ `super` (测试模块中) 使用通配符导入， 默认是 `false`。
+该 lint 可以通过 clippy 配置项 `warn-on-all-wildcard-imports = false` 来配置，用于是否禁用 `prelude`/ `super` (测试模块中) 使用通配符导入， Default是 `false`。

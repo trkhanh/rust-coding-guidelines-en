@@ -29,9 +29,9 @@ let res = { let x = somefunc(); x };
 if res { /* ... */ }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                          | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                          | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | -------------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [blocks_in_if_conditions](https://rust-lang.github.io/rust-clippy/master/#blocks_in_if_conditions) | yes           | no           | style      | warn      |
 

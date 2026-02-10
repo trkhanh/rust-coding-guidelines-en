@@ -36,9 +36,9 @@ ANOTHER_STATIC_ATOM.store(9, SeqCst);
 assert_eq!(ANOTHER_STATIC_ATOM.load(SeqCst), 9);
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------ | ---- | --------- | ------ | ------ | 
 | [borrow_interior_mutable_const](https://rust-lang.github.io/rust-clippy/master/#borrow_interior_mutable_const) | yes| no | Style | warn |
 | [declare_interior_mutable_const](https://rust-lang.github.io/rust-clippy/master/#declare_interior_mutable_const) | yes| no | Style | warn |

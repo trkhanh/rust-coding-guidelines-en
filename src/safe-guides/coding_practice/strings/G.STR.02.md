@@ -27,9 +27,9 @@ x += ", World";
 x.push_str(", World"); // 符合
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                              | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                              | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | -------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [string_add_assign](https://rust-lang.github.io/rust-clippy/master/#string_add_assign) | yes           | no           | pedantic    | allow     |
 | [string_add](https://rust-lang.github.io/rust-clippy/master/#string_add)               | yes           | no           | restriction | allow     |

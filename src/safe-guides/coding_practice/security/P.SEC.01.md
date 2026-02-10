@@ -13,7 +13,7 @@
     - 为 `Cargo.toml` 中第三方依赖指定确切的版本（“=xyz”而不是“xyz”），如果需要更新版本，则在检查源码后手动应用次要的 SemVer 补丁。
     - 可以使用[`cargo-dephell`](https://github.com/mimoo/cargo-dephell)这样的工具对依赖进行分析
     - 配合[whackadep](https://github.com/diem/whackadep)这样的可视化工具来管理 Rust 依赖
-- 使用 [`cargo-audit`](https://crates.io/crates/cargo-audit) 检测依赖的安全性。
+- 使用 [`cargo-audit`](https://crates.io/crates/cargo-audit) Detection依赖的安全性。
 - 使用自己的构建工具来替代 `Cargo`，可以更加安全。比如 Android 团队使用其`Soong`构建系统支持 Rust ，就选择禁用 `build.rs` ，就是考虑到审查起来太麻烦。
 - 注意设置运行时进程权限，防止运行时代码投毒
 

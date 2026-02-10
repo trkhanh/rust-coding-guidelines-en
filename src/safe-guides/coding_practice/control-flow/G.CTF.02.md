@@ -42,9 +42,9 @@ fn main(){
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group  | level |
+| lint name                                                                                    | Clippy Detectable | Rustc Detectable | Lint Group  | level |
 | -------------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | ----- |
 | [else_if_without_else](https://rust-lang.github.io/rust-clippy/master/#else_if_without_else) | yes           | no           | restriction | allow |
 

@@ -20,7 +20,7 @@
 ```rust
 /// # Invariants （不变性说明）
 ///
-/// 这个指针来自 C语言 端，这里默认 C 端来的是有效指针，信任 C 端
+/// 这个指针来自 C语言 端，这里Default C 端来的是有效指针，信任 C 端
 /// 这种信任对性能有益：零成本（没有检查开销）
 pub struct CPtr(*mut bindings::cptr);
 
@@ -65,7 +65,7 @@ impl CPtr {
 
 /// # Invariants （不变性说明）
 ///
-/// 这个指针来自 C语言 端，这里默认 C 端来的是有效指针，信任 C 端
+/// 这个指针来自 C语言 端，这里Default C 端来的是有效指针，信任 C 端
 /// 这种信任对性能有益：零成本（没有检查开销）
 pub struct CPtr(*mut bindings::cptr);
 

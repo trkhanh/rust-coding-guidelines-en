@@ -33,13 +33,13 @@ const BAZ: usize = foo(); // 符合
 
 ```rust
 const fn foo() -> bool {
-    for _i in 0..5 {}      // ERROR, 因为for loop默认不能用在const fn内（需要注明#![feature(const_for)]）
+    for _i in 0..5 {}      // ERROR, 因为for loopDefault不能用在const fn内（需要注明#![feature(const_for)]）
     false
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------ | ---- | --------- | ------ | ------ | 
 | [missing_const_for_fn](https://rust-lang.github.io/rust-clippy/master/#missing_const_for_fn) | yes| no | Perf | warn |

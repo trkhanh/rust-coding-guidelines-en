@@ -8,5 +8,5 @@
 
 | 对应选项 | 可选值 | 是否 stable | 说明|
 | ------ | ---- | ---- | ---- | 
-| [`tab_spaces`](https://rust-lang.github.io/rustfmt/#tab_spaces) | 4| yes（默认）| 缩进空格数｜
-|[`hard_tabs`](https://rust-lang.github.io/rustfmt/#hard_tabs)| false| yes（默认）| 禁止使用tab缩进｜
+| [`tab_spaces`](https://rust-lang.github.io/rustfmt/#tab_spaces) | 4| yes（Default）| 缩进空格数｜
+|[`hard_tabs`](https://rust-lang.github.io/rustfmt/#hard_tabs)| false| yes（Default）| 禁止使用tab缩进｜

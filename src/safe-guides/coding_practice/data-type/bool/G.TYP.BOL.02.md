@@ -37,9 +37,9 @@ if condition {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | ------------------------------------------------------------------------ | ------------- | ------------ | ----------- | --------- |
 | [logic_bug](https://rust-lang.github.io/rust-clippy/master/#logic_bug)   | yes           | no           | correctness | deny      |
 | [match_bool](https://rust-lang.github.io/rust-clippy/master/#match_bool) | yes           | no           | pedantic    | allow     |

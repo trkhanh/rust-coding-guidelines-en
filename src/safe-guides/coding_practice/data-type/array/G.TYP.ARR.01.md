@@ -29,14 +29,14 @@ pub const A: [u32;1_000_000] = [0u32; 1_000_000];
 pub static A: [u32;1_000_000] = [0u32; 1_000_000];
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ---------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [large_const_arrays](https://rust-lang.github.io/rust-clippy/master/#large_const_arrays) | yes           | no           | perf       | warn      |
 | [large_stack_arrays](https://rust-lang.github.io/rust-clippy/master/#large_stack_arrays) | yes           | no           | pedantic   | allow     |
 
-注意： `large_stack_arrays` 会检查在栈上分配的大数组，但clippy默认是 allow，根据实际使用场景决定是否针对这种情况发出警告。
+注意： `large_stack_arrays` 会检查在栈上分配的大数组，但clippyDefault是 allow，根据实际使用场景决定是否针对这种情况发出警告。
 
 
 

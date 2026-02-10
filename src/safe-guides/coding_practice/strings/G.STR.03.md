@@ -24,9 +24,9 @@ let bs = "a byte string".as_bytes();
 let bs = b"a byte string";
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                  | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                  | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ------------------------------------------------------------------------------------------ | ------------- | ------------ | ---------- | --------- |
 | [string_lit_as_bytes](https://rust-lang.github.io/rust-clippy/master/#string_lit_as_bytes) | yes           | no           | nursery    | allow     |
 

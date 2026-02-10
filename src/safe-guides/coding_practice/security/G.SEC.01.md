@@ -12,7 +12,7 @@
 2. 双向 Unicode 字符文本
 3. 同形 Unicode 字符
 
-Clippy Lint 目前只可以检测代码中出现的隐藏 Unicode 字符。
+Clippy Lint 目前只可以Detection代码中出现的隐藏 Unicode 字符。
 
 在 Rust 1.56.1 之后 新增两个 `lint` 拒绝代码中出现可以更改显示顺序的 `Unicode` 码点出现。并且特别禁止 `\u{202A}`，`\u{202B}`，`\u{202D}`，`\u{202E}`，`\u{2066}`， `\u{2067}`，`\u{2068}`，`\u{202C}` 和 `\u{2069}` 这几个特殊的 `Unicode` 码点。
 
@@ -79,9 +79,9 @@ pub fn get_embed_languages() -> FileContent {
  }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                                                       | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认 level |
+| lint name                                                                                                                                       | Clippy Detectable | Rustc Detectable | Lint Group  | Default level |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | ---------- |
 | [`invisible_characters`](https://rust-lang.github.io/rust-clippy/master/#invisible_characters)                                                  | yes           | no           | correctness | deny       |
 | [`text-direction-codepoint-in-comment`](https://doc.rust-lang.org/rustc/lints/listing/deny-by-default.html#text-direction-codepoint-in-comment) | no            | yes          | -           | deny       |

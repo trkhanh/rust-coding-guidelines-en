@@ -19,7 +19,7 @@ enum NonPortable {
 
 **【正例】**
 
-因为当前 lint 默认是 `deny`，所以需要将其配置为 `allow`。
+因为当前 lint Default是 `deny`，所以需要将其配置为 `allow`。
 
 ```rust
 #![allow(clippy::enum_clike_unportable_variant)]
@@ -40,9 +40,9 @@ pub(crate) enum PropertyType {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                      | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                                                      | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | -------------------------------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [enum_clike_unportable_variant](https://rust-lang.github.io/rust-clippy/master/#enum_clike_unportable_variant) | yes           | no           | correctness | deny      |
 

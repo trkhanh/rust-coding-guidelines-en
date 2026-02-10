@@ -32,9 +32,9 @@ impl fmt::Display for Structure {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                                    | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | -------------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [to_string_in_display](https://rust-lang.github.io/rust-clippy/master/#to_string_in_display) | yes           | no           | correctness | deny      |
 

@@ -4,7 +4,7 @@
 
 **【描述】**
 
-在常量和静态变量声明时已经默认含有隐式的`'static`生命周期，所以不需要额外增加显式`'static`。
+在常量和静态变量声明时已经Default含有隐式的`'static`生命周期，所以不需要额外增加显式`'static`。
 
 **【反例】**
 
@@ -24,9 +24,9 @@ const FOO: &[(&str, &str, fn(&Bar) -> bool)] = &[...]
 static FOO: &[(&str, &str, fn(&Bar) -> bool)] = &[...]
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name                                                                                                | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | -------------------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | ----- |
 | [redundant_static_lifetimes](https://rust-lang.github.io/rust-clippy/master/#redundant_static_lifetimes) | yes           | no           | Style      | warn  |
 

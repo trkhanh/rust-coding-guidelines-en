@@ -46,9 +46,9 @@ let _box = Box::new(3); // Box::new 被配置为不允许
 let mut xs = Vec::new(); // Vec::new is _not_ disallowed in the
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group      | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group      | level |
 | ------------------------------------------------------------ | ------------- | ------------ | --------------- | ----- |
 | [disallowed_method](https://rust-lang.github.io/rust-clippy/master/#disallowed_method) | yes           | no           | nursery         | allow |
 | [disallowed_script_idents](https://rust-lang.github.io/rust-clippy/master/#disallowed_script_idents) | yes           | no           | **restriction** | allow |

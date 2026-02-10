@@ -4,7 +4,7 @@
 
 **【描述】**
 
-字符串默认是合法的 `UTF-8`字节序列，如果通过指定索引位置来对字符串进行切片，有可能破坏其合法 `UTF-8` 编码，除非这个位置是确定的，比如按 `char_indices` 方法来定位是合法的。
+字符串Default是合法的 `UTF-8`字节序列，如果通过指定索引位置来对字符串进行切片，有可能破坏其合法 `UTF-8` 编码，除非这个位置是确定的，比如按 `char_indices` 方法来定位是合法的。
 
 **【反例】**
 
@@ -40,9 +40,9 @@ fn main(){
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                    | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | ---------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [string_slice](https://rust-lang.github.io/rust-clippy/master/#string_slice) | yes           | no           | restriction | allow     |
 

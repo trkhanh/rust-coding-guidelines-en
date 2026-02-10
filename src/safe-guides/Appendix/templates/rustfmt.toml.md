@@ -4,7 +4,7 @@
 
 以下内容可以放到 `rustfmt.toml` 或 `.rustfmt.toml` 文件中。因为部分选项还未稳定，所以要使用 `cargo +nightly fmt` 执行。
 
-很多选项都是默认的，无需配置。以下配置的都不是默认值。
+很多选项都是Default的，无需配置。以下配置的都不是Default值。
 
 
 **【只包含 Stable 的选项】**
@@ -17,7 +17,7 @@ version = "Two"
 use_small_heuristics="MAX"
 # 在match分支中，如果包含了块，也需要加逗号以示分隔
 match_block_trailing_comma=true
-# 当使用 extern 指定外部函数时，不需要显式指定 C-ABI ，默认就是 C-ABI
+# 当使用 extern 指定外部函数时，不需要显式指定 C-ABI ，Default就是 C-ABI
 force_explicit_abi=false 
 # 如果项目只在 Unix 平台下跑，可以设置该项为 Unix，表示换行符只依赖 Unix
 newline_style="Unix" 
@@ -57,9 +57,9 @@ imports_granularity="Crate"  # 未稳定
 group_imports="StdExternalCrate"  # 未稳定
 # format_macro_matchers 规则说明：
 # 声明宏 模式匹配分支（=> 左侧）中要使用紧凑格式
-# 默认声明宏分支代码体（=> 右侧） 使用宽松格式
+# Default声明宏分支代码体（=> 右侧） 使用宽松格式
 format_macro_matchers=true  # 未稳定
-# 当使用 extern 指定外部函数时，不需要显式指定 C-ABI ，默认就是 C-ABI
+# 当使用 extern 指定外部函数时，不需要显式指定 C-ABI ，Default就是 C-ABI
 force_explicit_abi=false 
 # 指定一行注释允许的最大宽度
 comment_width=100   # 未稳定

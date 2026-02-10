@@ -52,9 +52,9 @@ impl<'a> Colorize for &'a str {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                  | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                                  | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ---------------------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [field_reassign_with_default](https://rust-lang.github.io/rust-clippy/master/#field_reassign_with_default) | yes           | no           | style      | warn      |
 

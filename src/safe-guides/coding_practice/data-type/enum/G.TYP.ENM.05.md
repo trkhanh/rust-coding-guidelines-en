@@ -33,9 +33,9 @@ enum E {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                      | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                                      | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | ---------------------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [exhaustive_enums](https://rust-lang.github.io/rust-clippy/master/#exhaustive_enums)           | yes           | no           | restriction | allow     |
 | [manual_non_exhaustive](https://rust-lang.github.io/rust-clippy/master/#manual_non_exhaustive) | yes           | no           | style       | warn      |

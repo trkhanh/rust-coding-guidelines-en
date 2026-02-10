@@ -1,33 +1,33 @@
-## G.CMT.01 在公开的返回`Result`类型的函数文档中增加 Error 注释
+## G.CMT.01 Add "Erros" Section to documentation for public functoin returning `Result`
 
-**【级别】** 建议
+**【Level】** Advisory
 
-**【描述】**
+**【Description】**
 
-在公开（pub）的返回`Result`类型的函数文档中，建议增加 `# Error` 注释来解释什么场景下该函数会返回什么样的错误类型，方便用户处理错误。
+For public (pub) fuction that return a `Result` type, it is recommended ot include and `# Errors` section in the documentation. This section should explain the specific scenarios in which the funciton returns an error an what types of errors can be expected, assiting users in proper error handling.
 
-说明： 该规则可以通过 cargo clippy 来检测，但默认不会警告。
+Note: This rule can be detected by Cargo Clippy, but it does not trigger a waring by default.
 
-**【反例】**
-
+**【Negative Example】**
 
 ```rust
 #![warn(clippy::missing_errors_doc)]
 
 use std::io;
-// 不符合： Clippy 会警告 "warning: docs for function returning `Result` missing `# Errors` section"
+// Non-compliant：Clippy will issue a warning:
+//  "warning: docs for function returning `Result` missing `# Errors` section"
 pub fn read(filename: String) -> io::Result<String> {
     unimplemented!();
 }
 ```
 
-**【正例】**
+**【Positive Example】**
 
 ```rust
 #![warn(clippy::missing_errors_doc)]
 
 use std::io;
-// 符合：增加了规范的 Errors 文档注释
+// Compliant：Added a standardized Errors documentation section
 
 /// # Errors
 ///
@@ -38,8 +38,8 @@ pub fn read(filename: String) -> io::Result<String> {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                          | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认 level |
+| lint name                                                                                          | Clippy Detectable | Rustc Detectable | Lint Group | Default level |
 | -------------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | ---------- |
 | [missing_errors_doc](https://rust-lang.github.io/rust-clippy/master/index.html#missing_errors_doc) | yes           | no           | Style      | allow      |

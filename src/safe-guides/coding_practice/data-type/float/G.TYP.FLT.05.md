@@ -24,9 +24,9 @@ let _: u32 = 1f32.to_bits();
 let _: f32 = f32::from_bits(1_u32);
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                        | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                        | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ------------------------------------------------------------------------------------------------ | ------------- | ------------ | ---------- | --------- |
 | [transmute_float_to_int](https://rust-lang.github.io/rust-clippy/master/#transmute_float_to_int) | yes           | no           | complexity | warn      |
 | [transmute_int_to_float](https://rust-lang.github.io/rust-clippy/master/#transmute_int_to_float) | yes           | no           | complexity | warn      |

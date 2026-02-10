@@ -139,7 +139,7 @@ Goose 拥有许多其他负载测试工具所没有的独特[调试和日志记�
 
 #### 使用 Perf 寻找“热点”
 
-做cpu性能剖析有很多常用的 Linux 命令行工具，比如 linux 命令行工具 perf。它功能强大：它可以检测 CPU 性能计数器、跟踪点、kprobes 和 uprobes（动态跟踪）。
+做cpu性能剖析有很多常用的 Linux 命令行工具，比如 linux 命令行工具 perf。它功能强大：它可以Detection CPU 性能计数器、跟踪点、kprobes 和 uprobes（动态跟踪）。
 
 你可以使用 perf 工具对 CPU 进行采样分析。以一个指定的频率对CPU进行采样，进而拿到正在CPU上运行的指令乃至整个函数调用栈的快照，最后对采样的数据分析。比如说在100次采样中有20次在运行A指令或者A函数，那么`perf`就会认为A函数的CPU使用率为20%。
 
@@ -405,7 +405,7 @@ pub fn from_utf8(vec: Vec<u8>) -> Result<String, FromUtf8Error> {    match str::
 - [crossbeam](https://docs.rs/crossbeam/latest/crossbeam/) / [flume](https://github.com/zesterer/flume)，多线程channel/ 无锁并发结构
 - [Tokio](https://github.com/tokio-rs/tokio) ，高性能异步运行时
   - [loom](https://github.com/tokio-rs/loom)， Tokio 提供的并发代码测试工具，支持 C11 内存模型。
-  - [console](https://github.com/tokio-rs/console)，Tokio 提供的 Rust 异步诊断和调试工具，可以将其视为异步代码的 Clippy。通过监控应用程序中任务的运行时操作，可以检测*可能*暗示错误或性能问题的行为模式，并突出显示它们以供用户分析。
+  - [console](https://github.com/tokio-rs/console)，Tokio 提供的 Rust 异步诊断和调试工具，可以将其视为异步代码的 Clippy。通过监控应用程序中任务的运行时操作，可以Detection*可能*暗示错误或性能问题的行为模式，并突出显示它们以供用户分析。
 - 跨平台 SIMD，并行化你的计算。
 
 ### 12.  并发程序中，合理使用锁，或替换无锁数据结构
@@ -426,7 +426,7 @@ pub fn from_utf8(vec: Vec<u8>) -> Result<String, FromUtf8Error> {    match str::
 
 ### 1. 优化编译大小
 
-- 设置 codegen-units=1 ，codegen-units 叫做代码生成单元，Rust 编译器会把crate 生成的 LLVMIR进行分割，默认分割为16个单元，每个单元就叫 codegen-units，如果分割的太多，就不利于 Rust编译器使用内联优化一些函数调用，分割单元越大，才越容易判断需要内联的地方。但是这也有可能增大编译文件大小，需要大小和性能间寻找平衡。
+- 设置 codegen-units=1 ，codegen-units 叫做代码生成单元，Rust 编译器会把crate 生成的 LLVMIR进行分割，Default分割为16个单元，每个单元就叫 codegen-units，如果分割的太多，就不利于 Rust编译器使用内联优化一些函数调用，分割单元越大，才越容易判断需要内联的地方。但是这也有可能增大编译文件大小，需要大小和性能间寻找平衡。
 - 设置panic=abort。可以缩减编译文件的大小。
 - 设置编译优化等级为 `z`，意为最小二进制体积。编译器的优化级别对应的是`LLVM`函数内联的阈值，`z` 对应的是 25，而 级别 `3`则对应 275 。
 - 评估代码中泛型和宏的使用，是否可以精简

@@ -36,8 +36,8 @@ keywords = ["clippy", "lint", "plugin"]
 categories = ["development-tools", "development-tools::cargo-plugins"]
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                      | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                      | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ---------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [cargo_common_metadata](https://rust-lang.github.io/rust-clippy/master/#cargo_common_metadata) | yes           | no           | cargo      | allow     |

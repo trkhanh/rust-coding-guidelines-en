@@ -42,7 +42,7 @@ $ rustc --help
 - `crate` — 仅在该目录中搜索此 crate 的直接依赖项。
 - `native` — 仅在该目录中搜索本地库。
 - `framework` — 仅用于在该目录中搜索 macOS 框架。
-- `all` — 搜索此目录中的所有库类型。如果 KIND 没有指定，这将是默认值.
+- `all` — 搜索此目录中的所有库类型。如果 KIND 没有指定，这将是Default值.
 
 ### `-l`
 
@@ -66,7 +66,7 @@ $ rustc --help
 
 这将指示 rustc 以何种 crate type 去构建。该 Flag 接收逗号分隔的值列表，也可以多次指定。有效的 crate type 如下：
 
-- `lib` — 编译器生成的首选库类型， 目前默认为 rlib。
+- `lib` — 编译器生成的首选库类型， 目前Default为 rlib。
 - `rlib` — Rust 静态库。
 - `staticlib` — 本地静态库。
 - `dylib` — Rust 动态库。
@@ -92,14 +92,14 @@ $ rustc --help
 
 该 Flag 控制编译器生成的输出文件的类型。其接收以逗号分隔的值列表，也可以多次指定。有效的生成类型有：
 
-- `asm` — 生成在 crate 中的一个汇编代码文件。 默认的输出文件是 CRATE_NAME.s。
-- `dep-info` — 生成一个包含 Makefile 语法的文件，指示加载以生成 crate 的所有源文件。 默认输出文件是 CRATE_NAME.d。
-- `link` — 生成由 --crate-type 指定的 crates 。 默认输出文件取决于平台和 crate 类型。 如果未指定 --emit 这将是默认值。
-- `llvm-bc` — 生成一个包含 LLVM bitcode 的二进制文件。默认输出文件是 CRATE_NAME.bc。
-- `llvm-ir` — 生成一个包含 LLVM IR（ LLVM 中间语言）的文件。默认的输出文件是 CRATE_NAME.ll。
-- `metadata` — 生成一个关于该 crate 的元数据的文件。 默认输出文件是 CRATE_NAME.rmeta。
-- `mir` — 生成一个包含 Rust 中级中间表示（即中级中间语言）的文件。默认输出文件名是 `CRATE_NAME.mir`。
-- `obj` — 生成一个本地对象文件，默认输出文件是 `CRATE_NAME.o`。
+- `asm` — 生成在 crate 中的一个汇编代码文件。 Default的输出文件是 CRATE_NAME.s。
+- `dep-info` — 生成一个包含 Makefile 语法的文件，指示加载以生成 crate 的所有源文件。 Default输出文件是 CRATE_NAME.d。
+- `link` — 生成由 --crate-type 指定的 crates 。 Default输出文件取决于平台和 crate 类型。 如果未指定 --emit 这将是Default值。
+- `llvm-bc` — 生成一个包含 LLVM bitcode 的二进制文件。Default输出文件是 CRATE_NAME.bc。
+- `llvm-ir` — 生成一个包含 LLVM IR（ LLVM 中间语言）的文件。Default的输出文件是 CRATE_NAME.ll。
+- `metadata` — 生成一个关于该 crate 的元数据的文件。 Default输出文件是 CRATE_NAME.rmeta。
+- `mir` — 生成一个包含 Rust 中级中间表示（即中级中间语言）的文件。Default输出文件名是 `CRATE_NAME.mir`。
+- `obj` — 生成一个本地对象文件，Default输出文件是 `CRATE_NAME.o`。
 
 输出文件名可以用 `-o flag` 进行设置。使用` -C extra-filename`。Flag 可以添加文件名后缀。文件将被写入当前目录除非使用` --out-dir flag ` 标签。 每一个生成类型也可以使用 `KIND=PATH `的形式指定输出文件名，它优先于 `-o `标签。
 
@@ -126,7 +126,7 @@ $ rustc --help
 
 **调试信息说明：**
 
-- `0`：根本没有调试信息（默认）。
+- `0`：根本没有调试信息（Default）。
 - `1`: 仅行表。
 - `2`：完整的调试信息。
 
@@ -136,14 +136,14 @@ $ rustc --help
 
 **优化级别说明：**
 
-- `0`：没有优化，也打开 [`cfg(debug_assertions)`](https://doc.rust-lang.org/rustc/codegen-options/index.html#debug-assertions)（默认）。
+- `0`：没有优化，也打开 [`cfg(debug_assertions)`](https://doc.rust-lang.org/rustc/codegen-options/index.html#debug-assertions)（Default）。
 - `1`: 基本优化。
 - `2`: 一些优化。
 - `3`: 所有优化。
 - `s`:  优化二进制大小。
 - `z`：优化二进制大小，但也关闭循环向量化。 
 
-默认值为`0`.
+Default值为`0`.
 
 ### `-o` 
 
@@ -155,7 +155,7 @@ $ rustc --help
 
 #### `--explain OPT`
 
-用于提供错误消息的详细说明。`rustc` 对于每一个（检测到的）错误都会返回一个错误码，这将打印给定错误的更详细说明。
+用于提供错误消息的详细说明。`rustc` 对于每一个（Detection到的）错误都会返回一个错误码，这将打印给定错误的更详细说明。
 
 #### `--test`
 
@@ -197,7 +197,7 @@ $ rustc --help
 `code-model=val`，支持的值为：
 
 - `tiny` - 微小的代码模型。
-- `small`- 小代码模型。这是大多数受支持目标的默认模型。
+- `small`- 小代码模型。这是大多数受支持目标的Default模型。
 - `kernel` - 内核代码模型。
 - `medium` - 中等代码模型。
 - `large` - 大型代码模型。比如 x86 平台上，告诉编译器不要进行任何假设，使用64位绝对取址模型访问代码及数据。
@@ -216,7 +216,7 @@ $ rustc --help
 
 将此设置为 `1` 可能会提高生成代码的性能，但编译速度可能会变慢。
 
-如果未指定，则默认值为 16，用于非增量构建。对于增量构建，默认值为 256，这允许缓存更细粒度。
+如果未指定，则Default值为 16，用于非增量构建。对于增量构建，Default值为 256，这允许缓存更细粒度。
 
 #### `control-flow-guard` （安全）
 
@@ -224,7 +224,7 @@ $ rustc --help
 
 - `y`, `yes`, `on`, `checks`, 或无值：表示启用控制流防护。
 - `nochecks`：在没有运行时强制检查的情况下发出控制流保护元数据（这应该只用于测试目的，因为它不提供安全强制）。
-- `n`, `no`, `off`: 不启用控制流保护（默认）。
+- `n`, `no`, `off`: 不启用控制流保护（Default）。
 
 关于 Rust 和 CFG 的更详细说明参考：
 
@@ -238,20 +238,20 @@ $ rustc --help
 - `y`, `yes`, `on`, 或无值：启用调试断言。
 - `n`, `no`, or `off`: 禁用调试断言。
 
-如果无指定，调试断言会在 [opt-level](https://doc.rust-lang.org/rustc/codegen-options/index.html#opt-level) 为 0 的优化级别下默认开启。所以这里需要注意优化级别，debug_assertions 在 release 编译时最好不要开启。这个和 `debug_assert!` 宏相关。
+如果无指定，调试断言会在 [opt-level](https://doc.rust-lang.org/rustc/codegen-options/index.html#opt-level) 为 0 的优化级别下Default开启。所以这里需要注意优化级别，debug_assertions 在 release 编译时最好不要开启。这个和 `debug_assert!` 宏相关。
 
 #### `default-linker-libraries`
 
-`default-linker-libraries=val`，用于设置链接器是否可以链接它的默认库，可以设置的值为：
+`default-linker-libraries=val`，用于设置链接器是否可以链接它的Default库，可以设置的值为：
 
-- `y`, `yes`, `on`, 或无值：包括默认库（默认）。
-- `n`, `no`, or `off`: 排除默认库。
+- `y`, `yes`, `on`, 或无值：包括Default库（Default）。
+- `n`, `no`, or `off`: 排除Default库。
 
 #### `embed-bitcode` （优化：编译大小 && 编译时间）
 
 `embed-bitcode=val`，控制编译器是否将 LLVM 位码嵌入到目标文件中。它采用以下值之一：
 
-- `y`, `yes`, `on`, 或无值：将位码放入 rlibs（默认）。
+- `y`, `yes`, `on`, 或无值：将位码放入 rlibs（Default）。
 - `n`, `no`, or `off`: 从 rlibs 中省略位码。
 
 `rustc` 执行链接时优化 (LTO) 时需要 LLVM 位码（bitcode）。嵌入的位码将出现在 rustc 生成的目标文件中，该文件的名称由目标平台定义。大多数时候是这样 `.llvmbc`。
@@ -273,9 +273,9 @@ $ rustc --help
 - `y`, `yes`, `on`, 或无值：强制启用帧指针。
 - `n`, `no`, or `off`: 不要强制启用帧指针。这并不一定意味着将删除帧指针。
 
-如果未强制启用帧指针，则默认行为取决于 target。
+如果未强制启用帧指针，则Default行为取决于 target。
 
-一般情况下，如果设置 `force-frame-pointers=no` 是一种帧指针省略优化。它造成的弊大于利，默认情况下不应启用。
+一般情况下，如果设置 `force-frame-pointers=no` 是一种帧指针省略优化。它造成的弊大于利，Default情况下不应启用。
 
 #### `force-unwind-tables` （优化：编译大小）
 
@@ -284,7 +284,7 @@ $ rustc --help
 - `y`, `yes`, `on`, 或无值：强制生成 unwind 表。
 - `n`, `no`, or `off`: 不强制生成 unwind 表。如果目标需要 unwind 表，则会发出错误。
 
-如果未指定，则默认值取决于 target 。
+如果未指定，则Default值取决于 target 。
 
 打开 `force-unwind-tables=on` 可能会导致二进制编译大小膨胀，对于移动和嵌入式这种二进制大小很重要的场景下，建议启用该选项。
 
@@ -294,9 +294,9 @@ $ rustc --help
 
 #### `inline-threshold` （优化：性能）
 
-`inline-threshold=val`， 允许您设置内联函数的默认阈值。它接受一个无符号整数作为值。内联基于成本模型（cost model），其中较高的阈值将允许更多内联。
+`inline-threshold=val`， 允许您设置内联函数的Default阈值。它接受一个无符号整数作为值。内联基于成本模型（cost model），其中较高的阈值将允许更多内联。
 
-默认值取决于[opt-level](https://doc.rust-lang.org/rustc/codegen-options/index.html#opt-level)：
+Default值取决于[opt-level](https://doc.rust-lang.org/rustc/codegen-options/index.html#opt-level)：
 
 | 选择级别 | 临界点                                             |
 | -------- | -------------------------------------------------- |
@@ -313,13 +313,13 @@ $ rustc --help
 - `link-args=val`，将多个额外参数附加到链接器调用。选项应该用空格分隔。
 - `link-dead-code=val`，控制链接器是否保留死代码，尝试构建代码覆盖率指标时，此标志可能有用。它采用以下值之一：
   - `y`, `yes`, `on`, 或无值：保留死代码。
-  - `n`, `no`, or `off`: 删除死代码（默认）。
+  - `n`, `no`, or `off`: 删除死代码（Default）。
 - ` link-self-contained=val`，控制链接器是使用 Rust 附带的库和对象还是系统中的库和对象。
 - `linker=val `，控制链接器`rustc`调用哪个链接器来链接您的代码。它采用链接器可执行文件的路径。如果未指定此标志，则将根据目标推断链接器。选择特定的链接器，有助于**优化编译时间**。
-- `linker-flavor=val`，链接器带有[`-C linker`标志](https://doc.rust-lang.org/rustc/codegen-options/index.html#linker)，则链接器风格是从提供的值中推断出来的。如果没有给出链接器，则使用链接器风格来确定要使用的链接器。每个`rustc`目标都默认为某种链接器风格。选项参考:[linker-flavor](https://doc.rust-lang.org/rustc/codegen-options/index.html#linker-flavor) 。
+- `linker-flavor=val`，链接器带有[`-C linker`标志](https://doc.rust-lang.org/rustc/codegen-options/index.html#linker)，则链接器风格是从提供的值中推断出来的。如果没有给出链接器，则使用链接器风格来确定要使用的链接器。每个`rustc`目标都Default为某种链接器风格。选项参考:[linker-flavor](https://doc.rust-lang.org/rustc/codegen-options/index.html#linker-flavor) 。
 - `linker-plugin-lto=val`，允许将 LTO 优化推迟到实际的链接步骤，如果所有被链接的目标文件都是由基于 LLVM 的工具链创建的，那么这反过来又允许跨编程语言边界执行过程间**优化**。详细介绍参见[Linker-plugin-LTO](https://doc.rust-lang.org/rustc/linker-plugin-lto.html)。它采用以下值之一：
   - `y`, `yes`, `on`, 或无值：启用链接器插件 LTO。
-  - `n`, `no`, or `off`: 禁用链接器插件 LTO（默认）。
+  - `n`, `no`, or `off`: 禁用链接器插件 LTO（Default）。
   - 链接器插件的路径。
 
 #### `lto` （优化：性能）
@@ -403,29 +403,29 @@ LLVM Loop Vectorizer 具有许多功能，可以对复杂的循环进行矢量�
 - `abort`: 恐慌时终止进程，不能执行析构函数。
 - `unwind`: 恐慌时展开堆栈，可以执行析构函数，以及 catch_unwind 。
 
-如果未指定，则默认值取决于目标。
+如果未指定，则Default值取决于目标。
 
 
 
 #### ` prefer-dynamic`
 
-` prefer-dynamic=val`，默认情况下，`rustc`更喜欢静态链接依赖项。如果库的静态和动态版本都可用，此选项将指示应尽可能使用动态链接。有一个内部算法用于确定是否可以静态或动态地与依赖项链接。例如，`cdylib` crate类型可能只使用静态链接。此标志采用以下值之一：
+` prefer-dynamic=val`，Default情况下，`rustc`更喜欢静态链接依赖项。如果库的静态和动态版本都可用，此选项将指示应尽可能使用动态链接。有一个内部算法用于确定是否可以静态或动态地与依赖项链接。例如，`cdylib` crate类型可能只使用静态链接。此标志采用以下值之一：
 
 - `y`, `yes`, `on`, 或无值：使用动态链接。
-- `n`, `no`, or `off`: 使用静态链接（默认）。
+- `n`, `no`, or `off`: 使用静态链接（Default）。
 
 #### `profile-generate` （优化）
 
-`profile-generate=val`，允许创建检测二进制文件，这些二进制文件将收集分析数据以用于 Profile Guided Optimization (PGO)。该Flag 采用一个可选参数，该参数是已检测二进制文件将向其中发出收集的数据的目录的路径。有关详细信息，请参阅 [profile-guided optimization](https://doc.rust-lang.org/rustc/profile-guided-optimization.html) 。
+`profile-generate=val`，允许创建Detection二进制文件，这些二进制文件将收集分析数据以用于 Profile Guided Optimization (PGO)。该Flag 采用一个可选参数，该参数是已Detection二进制文件将向其中发出收集的数据的目录的路径。有关详细信息，请参阅 [profile-guided optimization](https://doc.rust-lang.org/rustc/profile-guided-optimization.html) 。
 
 相关：`profile-use=val`。
 
 #### `split-debuginfo` （调试）
 
-`split-debuginfo=val `，控制`rustc`生成的调试信息的“split debuginfo”的发射。此选项的默认行为是特定于平台的，并非此选项的所有可能值都适用于所有平台。可能的值为：
+`split-debuginfo=val `，控制`rustc`生成的调试信息的“split debuginfo”的发射。此选项的Default行为是特定于平台的，并非此选项的所有可能值都适用于所有平台。可能的值为：
 
-- `off`- 这是具有 ELF 二进制文件和 windows-gnu（不是 Windows MSVC 和 macOS）的平台的默认设置。这通常意味着可以在可执行文件部分的最终工件中找到 DWARF 调试信息。Windows MSVC 不支持此选项。在 macOS 上，此选项可防止最终执行`dsymutil`生成调试信息。
-- `packed`- 这是 Windows MSVC 和 macOS 的默认设置。这里的“packed”一词意味着所有调试信息都打包到与主可执行文件不同的文件中。在 Windows MSVC 上这是一个`*.pdb`文件，在 macOS 上这是一个`*.dSYM`文件夹，而在其他平台上这是一个`*.dwp` 文件。
+- `off`- 这是具有 ELF 二进制文件和 windows-gnu（不是 Windows MSVC 和 macOS）的平台的Default设置。这通常意味着可以在可执行文件部分的最终工件中找到 DWARF 调试信息。Windows MSVC 不支持此选项。在 macOS 上，此选项可防止最终执行`dsymutil`生成调试信息。
+- `packed`- 这是 Windows MSVC 和 macOS 的Default设置。这里的“packed”一词意味着所有调试信息都打包到与主可执行文件不同的文件中。在 Windows MSVC 上这是一个`*.pdb`文件，在 macOS 上这是一个`*.dSYM`文件夹，而在其他平台上这是一个`*.dwp` 文件。
 - `unpacked`- 这意味着调试信息将在每个编译单元（目标文件）的单独文件中找到。Windows MSVC 不支持此功能。在 macOS 上，这意味着原始目标文件将包含调试信息。在其他 Unix 平台上，这意味着`*.dwo`文件将包含调试信息。
 
 请注意，此时`packed`和`unpacked`在`-Z unstable-options`非 macOS 平台上被关闭。
@@ -447,7 +447,7 @@ LLVM Loop Vectorizer 具有许多功能，可以对复杂的循环进行矢量�
 在该 Flag 下面有许多未稳定的子参数，这里就不一一列举。只挑选几个和安全相关的展示一下：
 
 - `stack-protector=val` ，用于控制栈粉碎保护策略，用于缓冲溢出保护。通过命令 `rustc --print stack-protector-strategies`可以看到详细设置值。
-- `sanitizer=val`，sanitizers（CFI 除外）的实现几乎完全依赖于 LLVM，将来增加 GCC 后端应该可以多一些支持。用于支持 内存错误检测器（[AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html)）、LLVM 控制流完整性 (CFI) 提供前沿控制流保护（[ControlFlowIntegrity](https://clang.llvm.org/docs/ControlFlowIntegrity.html) ）、运行时内存泄漏检测器（[LeakSanitizer](https://clang.llvm.org/docs/LeakSanitizer.html)）、未初始化读取的检测器（[MemorySanitizer](https://clang.llvm.org/docs/MemorySanitizer.html)）、数据竞争检测器（[ThreadSanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html)）等。
+- `sanitizer=val`，sanitizers（CFI 除外）的实现几乎完全依赖于 LLVM，将来增加 GCC 后端应该可以多一些支持。用于支持 内存错误Detection器（[AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html)）、LLVM 控制流完整性 (CFI) 提供前沿控制流保护（[ControlFlowIntegrity](https://clang.llvm.org/docs/ControlFlowIntegrity.html) ）、运行时内存泄漏Detection器（[LeakSanitizer](https://clang.llvm.org/docs/LeakSanitizer.html)）、未初始化读取的Detection器（[MemorySanitizer](https://clang.llvm.org/docs/MemorySanitizer.html)）、数据竞争Detection器（[ThreadSanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html)）等。
 
 
 

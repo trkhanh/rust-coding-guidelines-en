@@ -22,9 +22,9 @@ let b = 0;
 a += b; // 符合
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                              | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                              | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | -------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [assign_op_pattern](https://rust-lang.github.io/rust-clippy/master/#assign_op_pattern) | yes           | no           | style      | warn      |
 

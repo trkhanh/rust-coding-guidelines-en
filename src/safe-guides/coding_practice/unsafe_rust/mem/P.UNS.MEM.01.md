@@ -6,7 +6,7 @@
 
 可以通过以下 `#[repr]` 属性来控制结构体和元组的数据布局：
 
-- `#[repr(Rust)]` ，默认 Rust 数据布局
+- `#[repr(Rust)]` ，Default Rust 数据布局
 - `#[repr(C)]` ，与 C 兼容的布局
 - `#[repr(align(N))]` ，指定对齐方式
 - `#[repr(packed)]` ，指定字段将不在内部对齐

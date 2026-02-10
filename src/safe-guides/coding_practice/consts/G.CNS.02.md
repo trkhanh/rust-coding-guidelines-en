@@ -35,9 +35,9 @@ const MAX_PRINTED: usize = MAX_START + MAX_END;
 assert!(MAX_PRINTED < MIN_OVERFLOW);
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------ | ---- | --------- | ------ | ------ | 
 | [assertions_on_constants](https://rust-lang.github.io/rust-clippy/master/#assertions_on_constants) | yes| no | Style | warn |
 

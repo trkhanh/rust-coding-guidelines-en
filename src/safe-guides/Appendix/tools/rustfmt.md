@@ -112,7 +112,7 @@ group_imports="StdExternalCrate"
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`version`](https://rust-lang.github.io/rustfmt/?#version) | One（默认） | No|  指定 rustfmlt 格式化版本 |
+| [`version`](https://rust-lang.github.io/rustfmt/?#version) | One（Default） | No|  指定 rustfmlt 格式化版本 |
 
 【示例】
 
@@ -132,7 +132,7 @@ version = "Two"
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`ignore`](https://rust-lang.github.io/rustfmt/?#ignore) | 格式化每一个Rust文件（默认） | No|  指定文件或目录跳过格式化 |
+| [`ignore`](https://rust-lang.github.io/rustfmt/?#ignore) | 格式化每一个Rust文件（Default） | No|  指定文件或目录跳过格式化 |
 
 【示例】
 
@@ -155,13 +155,13 @@ ignore = ["/"]
 
 【描述】
 
-可以通过 `disable_all_formatting=true` 配置来禁用格式化。默认是开启的。
+可以通过 `disable_all_formatting=true` 配置来禁用格式化。Default是开启的。
 
 【对应配置项】
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`disable_all_formatting`](https://rust-lang.github.io/rustfmt/?#disable_all_formatting) | false（默认） | No|  禁止格式化 |
+| [`disable_all_formatting`](https://rust-lang.github.io/rustfmt/?#disable_all_formatting) | false（Default） | No|  禁止格式化 |
 
 
 ### 配置 edition 版次
@@ -174,7 +174,7 @@ ignore = ["/"]
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`edition`](https://rust-lang.github.io/rustfmt/?#edition) | 2015（默认） | No| 配置 edition 版次 |
+| [`edition`](https://rust-lang.github.io/rustfmt/?#edition) | 2015（Default） | No| 配置 edition 版次 |
 
 【示例】
 
@@ -186,13 +186,13 @@ edition = "2018"
 
 【描述】
 
-默认未启用，但是可以通过配置此功能在 Nightly 上启用此功能。
+Default未启用，但是可以通过配置此功能在 Nightly 上启用此功能。
 
 【对应配置项】
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`unstable_features`](https://rust-lang.github.io/rustfmt/?#unstable_features) | false（默认） | No| 开启未稳定特性 |
+| [`unstable_features`](https://rust-lang.github.io/rustfmt/?#unstable_features) | false（Default） | No| 开启未稳定特性 |
 
 
 
@@ -208,13 +208,13 @@ edition = "2018"
 
 `rustfmt` 还提供很多其他宽度设置：
 
-- fn_call_width, 函数调用最大宽度设置，其默认值是 `max_width`的 `60%`。
-- attr_fn_like_width, 像函数那样使用的属性宏最大宽度，其默认值是 `max_width`的 `70%`。
-- struct_lit_width,  结构体字面量最大宽度，其默认值是 `max_width`的 `18%`。
-- struct_variant_width, 结构体变量最大宽度，其默认值是 `max_width`的 `35%`。
-- array_width, 数组最大宽度，其默认值是 `max_width`的 `60%`。
-- chain_width, 链式结构最大宽度，其默认值是 `max_width`的 `60%`。
-- single_line_if_else_max_width，单行 `if-else` 最大宽度，其默认值是 `max_width`的 `50%`。
+- fn_call_width, 函数调用最大宽度设置，其Default值是 `max_width`的 `60%`。
+- attr_fn_like_width, 像函数那样使用的属性宏最大宽度，其Default值是 `max_width`的 `70%`。
+- struct_lit_width,  结构体字面量最大宽度，其Default值是 `max_width`的 `18%`。
+- struct_variant_width, 结构体变量最大宽度，其Default值是 `max_width`的 `35%`。
+- array_width, 数组最大宽度，其Default值是 `max_width`的 `60%`。
+- chain_width, 链式结构最大宽度，其Default值是 `max_width`的 `60%`。
+- single_line_if_else_max_width，单行 `if-else` 最大宽度，其Default值是 `max_width`的 `50%`。
 
 这么多宽度设置管理起来比较麻烦，所以使用 `use_small_heuristics` 来管理更好。
 
@@ -268,7 +268,7 @@ fn main() {
 
 **【正例】**
 
-`use_small_heuristics` 默认配置示例。
+`use_small_heuristics` Default配置示例。
 
 
 ```rust
@@ -301,15 +301,15 @@ fn main() {
 
 **【rustfmt 配置】**
 
-此规则 Clippy 不可检测，由 rustfmt 自动格式化。
+此规则 Clippy 不Detectable，由 rustfmt 自动格式化。
 
 rustfmt 配置：
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- |
-| [`max_width`](https://rust-lang.github.io/rustfmt/?#max_width) | 100 | yes（默认）| 行最大宽度默认值|
-|[`error_on_line_overflow`](https://rust-lang.github.io/rustfmt/?#error_on_line_overflow)| false（默认）| No (tracking issue: #3391)| 如果超过最大行宽设置则报错|
-|[`use_small_heuristics`](https://rust-lang.github.io/rustfmt/?#use_small_heuristics)| Default（默认）Max（推荐） | Yes| 统一管理宽度设置|
+| [`max_width`](https://rust-lang.github.io/rustfmt/?#max_width) | 100 | yes（Default）| 行最大宽度Default值|
+|[`error_on_line_overflow`](https://rust-lang.github.io/rustfmt/?#error_on_line_overflow)| false（Default）| No (tracking issue: #3391)| 如果超过最大行宽设置则报错|
+|[`use_small_heuristics`](https://rust-lang.github.io/rustfmt/?#use_small_heuristics)| Default（Default）Max（推荐） | Yes| 统一管理宽度设置|
 
 
 ## 单行规则
@@ -357,23 +357,23 @@ fn main() {
 
 **【rustfmt 配置】**
 
-此规则 Clippy 不可检测，由 rustfmt 自动格式化。
+此规则 Clippy 不Detectable，由 rustfmt 自动格式化。
 
 rustfmt 配置：
 
-| 对应选项 | 默认值 | 是否 stable | 说明 |
+| 对应选项 | Default值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`empty_item_single_line`](https://rust-lang.github.io/rustfmt/?#empty_item_single_line) | true（默认） | No| 当语言项内容为空时，要保持单行 |
-| [`fn_single_line`](https://rust-lang.github.io/rustfmt/?#fn_single_line) | false（默认） | No| 当函数中只有一个表达式时，不要保持单行 |
-| [`struct_lit_single_line`](https://rust-lang.github.io/rustfmt/?#struct_lit_single_line) | true（默认） | No| 当结构体字面量中只有少量表达式时，要保持单行 |
+| [`empty_item_single_line`](https://rust-lang.github.io/rustfmt/?#empty_item_single_line) | true（Default） | No| 当语言项内容为空时，要保持单行 |
+| [`fn_single_line`](https://rust-lang.github.io/rustfmt/?#fn_single_line) | false（Default） | No| 当函数中只有一个表达式时，不要保持单行 |
+| [`struct_lit_single_line`](https://rust-lang.github.io/rustfmt/?#struct_lit_single_line) | true（Default） | No| 当结构体字面量中只有少量表达式时，要保持单行 |
 
-## 换行样式以文件自动检测为主
+## 换行样式以文件自动Detection为主
 
 **【级别】** 建议
 
 **【描述】**
 
-换行样式是基于每个文件自动检测的。 具有混合行尾的文件将转换为第一个检测到的行尾样式。
+换行样式是基于每个文件自动Detection的。 具有混合行尾的文件将转换为第一个Detection到的行尾样式。
 
 不同平台换行符不同：
 
@@ -382,13 +382,13 @@ rustfmt 配置：
 
 **【rustfmt 配置】**
 
-此规则 Clippy 不可检测，由 rustfmt 自动格式化。
+此规则 Clippy 不Detectable，由 rustfmt 自动格式化。
 
 rustfmt 配置：
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`newline_style`](https://rust-lang.github.io/rustfmt/?#newline_style) | Auto（默认） | Yes| 换行样式以文件自动检测为主 |
+| [`newline_style`](https://rust-lang.github.io/rustfmt/?#newline_style) | Auto（Default） | Yes| 换行样式以文件自动Detection为主 |
 
 
 ## 结尾逗号规则
@@ -469,11 +469,11 @@ fn main() {
 
 **【rustfmt 配置】**
 
-此规则 Clippy 不可检测，由 rustfmt 自动格式化。
+此规则 Clippy 不Detectable，由 rustfmt 自动格式化。
 
 rustfmt 配置：
 
 | 对应选项 | 可选值 | 是否 stable | 说明 |
 | ------ | ---- | ---- | ---- | 
-| [`trailing_comma`](https://rust-lang.github.io/rustfmt/?#trailing_comma) | "Vertical"（默认） | No |  当多个字段在不同行时，在最后一个字段结尾添加逗号，如果在同一行，则不加逗号|
-| [`match_block_trailing_comma`](https://rust-lang.github.io/rustfmt/?#match_block_trailing_comma) | false（默认） | No| 在match分支中，如果包含了块，则不需要加逗号，否则需要加 |
+| [`trailing_comma`](https://rust-lang.github.io/rustfmt/?#trailing_comma) | "Vertical"（Default） | No |  当多个字段在不同行时，在最后一个字段结尾添加逗号，如果在同一行，则不加逗号|
+| [`match_block_trailing_comma`](https://rust-lang.github.io/rustfmt/?#match_block_trailing_comma) | false（Default） | No| 在match分支中，如果包含了块，则不需要加逗号，否则需要加 |

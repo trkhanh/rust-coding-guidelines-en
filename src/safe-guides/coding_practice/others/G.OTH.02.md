@@ -28,8 +28,8 @@ let _micros = dur.subsec_micros(); // 符合：通过标准库函数得到微秒
 let _millis = dur.subsec_millis(); // 符合：通过标准库函数得到毫秒
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | [duration_subsec](https://rust-lang.github.io/rust-clippy/master/#duration_subsec) | yes           | no           | complexity | warn  |

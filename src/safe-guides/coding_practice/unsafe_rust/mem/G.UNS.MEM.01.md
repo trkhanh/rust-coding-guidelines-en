@@ -101,9 +101,9 @@ pub unsafe trait Array: Sized {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group  | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group  | level |
 | ------------------------------------------------------------ | ------------- | ------------ | ----------- | ----- |
 | [uninit_assumed_init](https://rust-lang.github.io/rust-clippy/master/#uninit_assumed_init) | yes           | no           | correctness | deny  |
 | [uninit_vec](https://rust-lang.github.io/rust-clippy/master/#uninit_vec) | yes           | no           | correctness | deny  |

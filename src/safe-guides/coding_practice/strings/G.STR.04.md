@@ -32,9 +32,9 @@ let name = "foo";
 if name.starts_with('_') {};
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                        | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                        | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | -------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [chars_last_cmp](https://rust-lang.github.io/rust-clippy/master/#chars_last_cmp) | yes           | no           | style      | warn      |
 | [chars_next_cmp](https://rust-lang.github.io/rust-clippy/master/#chars_next_cmp) | yes           | no           | style      | warn      |

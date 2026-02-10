@@ -15,7 +15,7 @@
 3. `wrapping_*`系列函数则是直接抛弃已经溢出的最高位，将剩下的部分返回。即，返回直接二进制补码结果。
 4. `overflowing_*`系列函数返回二进制补码结果以及指示是否发生溢出的布尔值。
 
-Rust 编译器在编译时默认没有溢出检查（可通过编译参数来引入），但在运行时会有 Rust 内置 lint (`#[deny(arithmetic_overflow)]`)来检查，如果有溢出会 Panic。
+Rust 编译器在编译时Default没有溢出检查（可通过编译参数来引入），但在运行时会有 Rust 内置 lint (`#[deny(arithmetic_overflow)]`)来检查，如果有溢出会 Panic。
 
 无符号整数使用时要注意回绕(wrap around)，不同整数类型转换时需注意截断。
 
@@ -66,9 +66,9 @@ fn test_integer_overflow() {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                                                    | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | ------------------------------------------------------------------------------------------------------------ | ------------- | ------------ | ----------- | --------- |
 | [integer_arithmetic](https://rust-lang.github.io/rust-clippy/master/#integer_arithmetic)                     | yes           | no           | restriction | allow     |
 | [manual_saturating_arithmetic](https://rust-lang.github.io/rust-clippy/master/#manual_saturating_arithmetic) | yes           | no           | style       | warn      |

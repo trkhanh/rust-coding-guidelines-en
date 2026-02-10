@@ -13,7 +13,7 @@
 **【反例】**
 
 ```rust
-// 这个配置文件默认会跟随源码出现，所以，必定可以读取到
+// 这个配置文件Default会跟随源码出现，所以，必定可以读取到
 // 这个配置文件不应该没有被提供，如果万一出现了没有提供的情况，需要 Panic ，但这里并没有提供错误信息，对于调试或使用都没有帮助
 let config = Config::read("some_config.toml").unwrap();
 
@@ -39,7 +39,7 @@ fn main() {
 **【正例】**
 
 ```rust
-// 这个配置文件默认会跟随源码出现，所以，必定可以读取到
+// 这个配置文件Default会跟随源码出现，所以，必定可以读取到
 // 这个配置文件不应该没有被提供，如果万一出现了没有提供的情况，需要 Panic 并提供错误信息方便调试，或者让使用者知道原因
 // expect 里输出的描述信息，使用肯定的内容，整体代码可读性更高，更能突出 expect 的语义
 let config = Config::read("some_config.toml").expect("Provide the correct configuration file"); 

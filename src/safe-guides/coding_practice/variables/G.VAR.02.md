@@ -4,7 +4,7 @@
 
 **【描述】**
 
-Rust 语言默认支持 Non ASCII 字符作为合法标识符。但是，为了统一团队代码风格，建议使用最常用的 ASCII 字符作为合法标识符。
+Rust 语言Default支持 Non ASCII 字符作为合法标识符。但是，为了统一团队代码风格，建议使用最常用的 ASCII 字符作为合法标识符。
 
 > 此外，通常**命名相关**的 Clippy Lint 检查只支持英文命名。
 
@@ -88,10 +88,10 @@ fn main () {
 // his name: People { name: "مصطفى", addr: "Oakland" }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                                              | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name                                                                                                              | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | ----- |
 | [rustc-lint: non-ascii-idents](https://doc.rust-lang.org/rustc/lints/listing/allowed-by-default.html#non-ascii-idents) | no            | yes          | pedantic   | deny  |
 
-默认为 `allow`，但是此规则需要设置 `#![deny(non_ascii_idents)]`。
+Default为 `allow`，但是此规则需要设置 `#![deny(non_ascii_idents)]`。

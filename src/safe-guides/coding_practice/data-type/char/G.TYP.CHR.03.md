@@ -31,9 +31,9 @@ let x = unsafe {std::char::from_u32_unchecked(x) };
 assert_eq!('%', x);
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                      | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                      | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ---------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [transmute_int_to_char](https://rust-lang.github.io/rust-clippy/master/#transmute_int_to_char) | yes           | no           | complexity | warn      |
 

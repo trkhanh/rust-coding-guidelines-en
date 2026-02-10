@@ -26,8 +26,8 @@ extern crate crossbeam;
 use crossbeam::{spawn_unsafe};
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | [unsafe_removed_from_name](https://rust-lang.github.io/rust-clippy/master/#unsafe_removed_from_name) | yes           | no           | style      | warn  |

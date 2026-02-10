@@ -23,9 +23,9 @@ let (x,y) = (true, false);
 if x && !y {} //  符合：逻辑运算符，支持短路
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                                      | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                                      | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ---------------------------------------------------------------------------------------------- | ------------- | ------------ | ---------- | --------- |
 | [needless_bitwise_bool](https://rust-lang.github.io/rust-clippy/master/#needless_bitwise_bool) | yes           | no           | pedantic   | allow     |
 

@@ -1,6 +1,6 @@
 # Clippy 模板
 
-有些 Clippy 的 Lint，依赖于一些配置项，如果不想要默认值，可以在 `clippy.toml` 中进行设置。
+有些 Clippy 的 Lint，依赖于一些配置项，如果不想要Default值，可以在 `clippy.toml` 中进行设置。
 
 ```toml
 # for `disallowed_method`:

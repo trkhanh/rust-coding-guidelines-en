@@ -54,8 +54,8 @@ unsafe fn mut_self(&self) -> &mut Self {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                          | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认 level |
+| lint name                                                                          | Clippy Detectable | Rustc Detectable | Lint Group  | Default level |
 | ---------------------------------------------------------------------------------- | ------------- | ------------ | ----------- | ---------- |
 | [cast_ref_to_mut](https://rust-lang.github.io/rust-clippy/master/#cast_ref_to_mut) | yes           | no           | correctness | deny       |

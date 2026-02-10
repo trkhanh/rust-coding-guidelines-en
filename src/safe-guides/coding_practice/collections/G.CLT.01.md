@@ -8,15 +8,15 @@
 
 只有在有大量的 列表 拆分 和 合并 操作时，才真正需要链表，因为链表允许你只需操作指针而非复制数据来完成这些操作。 
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                | Clippy 可检测 | Rustc 可检测 | Lint Group | 默认level |
+| lint name                                                                | Clippy Detectable | Rustc Detectable | Lint Group | Defaultlevel |
 | ------------------------------------------------------------------------ | ------------- | ------------ | ---------- | --------- |
 | [linkedlist](https://rust-lang.github.io/rust-clippy/master/#linkedlist) | yes           | no           | pedantic   | allow     |
 
 该 lint 对应 `clippy.toml` 配置项：
 
 ```toml
-# 如果函数是被导出的 API，则该 lint 不会被触发，是防止 lint 建议对 API 有破坏性的改变。默认为 true
+# 如果函数是被导出的 API，则该 lint 不会被触发，是防止 lint 建议对 API 有破坏性的改变。Default为 true
 avoid-breaking-exported-api = true 
 ```

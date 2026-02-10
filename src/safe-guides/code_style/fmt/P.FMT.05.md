@@ -223,5 +223,5 @@ fn main() {
 
 | 对应选项                                                             | 可选值        | 是否 stable | 说明                                         |
 | -------------------------------------------------------------------- | ------------- | ----------- | -------------------------------------------- |
-| [`indent_style`](https://rust-lang.github.io/rustfmt/?#indent_style) | Block（默认） | No          | 多个标识符定义保持块状风格，缩进符合标准     |
+| [`indent_style`](https://rust-lang.github.io/rustfmt/?#indent_style) | Block（Default） | No          | 多个标识符定义保持块状风格，缩进符合标准     |
 | [`indent_style`](https://rust-lang.github.io/rustfmt/?#indent_style) | Visual        | No          | 多个标识符定义保持对齐风格，但不符合缩进标准 |

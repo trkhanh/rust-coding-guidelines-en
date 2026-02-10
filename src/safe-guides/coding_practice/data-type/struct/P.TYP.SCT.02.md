@@ -1,4 +1,4 @@
-## P.TYP.SCT.02  结构体实例需要默认实现时，宜使用`Default`特质
+## P.TYP.SCT.02  结构体实例需要Default实现时，宜使用`Default`特质
 
 **【描述】**
 

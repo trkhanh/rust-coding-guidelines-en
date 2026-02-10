@@ -6,7 +6,7 @@ Rust 有自动化格式化工具 rustfmt ，可以帮助开发者摆脱手工调
 
 说明：
 
-对于 `rustfmt` 中未稳定的配置项（`Stable`为`No`），则表示该配置项不能在稳定版（Stable）Rust 中更改配置，但其默认值会在`cargo fmt`时生效。在 Nightly Rust 下则都可以自定义配置。
+对于 `rustfmt` 中未稳定的配置项（`Stable`为`No`），则表示该配置项不能在稳定版（Stable）Rust 中更改配置，但其Default值会在`cargo fmt`时生效。在 Nightly Rust 下则都可以自定义配置。
 
 如需了解在稳定版 Rust 中使用未稳定配置项的方法、配置示例及其他全局配置项说明，请参阅：[Rustfmt 配置相关说明](./../Appendix/tools/rustfmt.md) 。
 

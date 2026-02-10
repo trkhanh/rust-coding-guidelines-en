@@ -33,9 +33,9 @@ let x = 2;
 if (x == 2) { }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group  | 默认level |
+| lint name                                                                    | Clippy Detectable | Rustc Detectable | Lint Group  | Defaultlevel |
 | ---------------------------------------------------------------------------- | ------------- | ------------ | ----------- | --------- |
 | [bad_bit_mask](https://rust-lang.github.io/rust-clippy/master/#bad_bit_mask) | yes           | no           | correctness | deny      |
 

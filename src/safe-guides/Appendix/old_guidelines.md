@@ -42,9 +42,9 @@ fn main() {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | 是否可定制 |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | 是否可定制 |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | _ | no           | no           | _   | yes |
 
@@ -58,13 +58,13 @@ fn main() {
 
 **淘汰原因**
 
-Rust 编译器可以检测到这种情况，之前考虑到编译器错误比较晦涩，列出该规则，但是进一步考虑到这个应该是 Rust 开发者最基本的认知，顾淘汰此规则。
+Rust 编译器可以Detection到这种情况，之前考虑到编译器错误比较晦涩，列出该规则，但是进一步考虑到这个应该是 Rust 开发者最基本的认知，顾淘汰此规则。
 
 **【描述】**
 
 局部变量生命周期始于其声明终于其作用域结束。如果在其生命周期之外被引用，则程序的行为是未定义的。当然，Rust 编译器也会阻止你这么干。
 
-*注： Rust 编译器可以检测到这种情况，但是编译器错误比较晦涩，本原则用来提示开发者注意这种情况。 *
+*注： Rust 编译器可以Detection到这种情况，但是编译器错误比较晦涩，本原则用来提示开发者注意这种情况。 *
 
 **【反例】**
 
@@ -112,15 +112,15 @@ let mut b = 2;
 std::mem::swap(&mut a, &mut b);
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | 是否可定制 |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | 是否可定制 |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | _ | no           | no           | _   | yes |
 
 **【定制化参考】**
 
-这条规则如果需要定制Lint，则可以检测变量赋值操作，识别交换语义，推荐用户使用 `swap` 函数。
+这条规则如果需要定制Lint，则可以Detection变量赋值操作，识别交换语义，推荐用户使用 `swap` 函数。
 
 ## 数据类型
 
@@ -186,7 +186,7 @@ Rust 中只允许索引为 `usize` 类型，因为：
 
 【定制化参考】
 
-可以检测使用 `Option<T>` 包含 `Error` 类型的情况，发出警告。
+可以Detection使用 `Option<T>` 包含 `Error` 类型的情况，发出警告。
 
 **【描述】**
 
@@ -218,9 +218,9 @@ fn f() -> Result<(), Error> {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | 是否可定制 |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | 是否可定制 |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | _ | no           | no           | _   | yes |
 
@@ -254,9 +254,9 @@ let b = `0xFFFF`
 let c = `0xF0F0_F0F0
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group  | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group  | level |
 | ------------------------------------------------------------ | ------------- | ------------ | ----------- | ----- |
 | [decimal_literal_representation](https://rust-lang.github.io/rust-clippy/master/#decimal_literal_representation) | yes           | no           | restriction | allow |
 
@@ -421,7 +421,7 @@ fn main(){
 
 **【描述】**
 
-Rust 中没有默认的构造函数，都是自定义构造函数。
+Rust 中没有Default的构造函数，都是自定义构造函数。
 
 如果需要多个构造函数，或者构造时需要很多可选配置的复杂场景，那么构建者模式是适合你的选择。
 
@@ -490,9 +490,9 @@ fn builder_test() {
 
 **【描述】**
 
-需要取出 Enum 中值的时候，可能会遇到所有权的限制，此时可以使用 `std::men::take` 获取当前的值，而将默认值替换原值，这样可以避免所有权的限制。
+需要取出 Enum 中值的时候，可能会遇到所有权的限制，此时可以使用 `std::men::take` 获取当前的值，而将Default值替换原值，这样可以避免所有权的限制。
 
-但是 `std::men::take` 只适合实现 `Default` 的类型，这样就有默认实现可以替换了。
+但是 `std::men::take` 只适合实现 `Default` 的类型，这样就有Default实现可以替换了。
 
 如果没有实现 `Default` 的类型，可以使用 `std::men::swap` 或 `std::mem::replace` 用给定的值来替换原值。
 
@@ -583,9 +583,9 @@ impl TagNumber {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group     | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group     | level |
 | ------------------------------------------------------------ | ------------- | ------------ | -------------- | ----- |
 | [no_effect](https://rust-lang.github.io/rust-clippy/master/#no_effect) | yes           | no           | **complexity** | warn  |
 
@@ -627,9 +627,9 @@ let foo = if … {
 };
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------ | ---- | --------- | ------ | ------ |
 | [branches_sharing_code](https://rust-lang.github.io/rust-clippy/master/#branches_sharing_code) | yes| no | nursery | allow |
 
@@ -726,9 +726,9 @@ match "foo" {
 }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group     | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group     | level |
 | ------------------------------------------------------------ | ------------- | ------------ | -------------- | ----- |
 | [collapsible_else_if](https://rust-lang.github.io/rust-clippy/master/#collapsible_else_if) | yes           | no           | style          | warn  |
 | [collapsible_if](https://rust-lang.github.io/rust-clippy/master/#collapsible_if) | yes           | no           | style          | warn  |
@@ -806,9 +806,9 @@ iter.flatten();
 let nums: Vec<i32> = ["1", "2", "whee!"].iter().filter_map(|x| x.parse().ok()).collect();
 
 ```
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group | level |
 | ------------------------------------------------------------ | ------------- | ------------ | ---------- | ----- |
 | [explicit_counter_loop](https://rust-lang.github.io/rust-clippy/master/#explicit_counter_loop) | yes           | no           | complexity | warn  |
 | [filter_map_identity](https://rust-lang.github.io/rust-clippy/master/#filter_map_identity) | yes           | no           | complexity | warn  |
@@ -1074,9 +1074,9 @@ fn foo(interned: Rc<RefCell<i32>>) { ... }
 fn foo(interned: Arc<Mutex<i32>>) { ... }
 ```
 
-**【Lint 检测】**
+**【Lint Detection】**
 
-| lint name                                                    | Clippy 可检测 | Rustc 可检测 | Lint Group  | level |
+| lint name                                                    | Clippy Detectable | Rustc Detectable | Lint Group  | level |
 | ------------------------------------------------------------ | ------------- | ------------ | ----------- | ----- |
 | [rc_mutex](https://rust-lang.github.io/rust-clippy/master/#rc_mutex) | yes           | no           | restriction | allow |
 
