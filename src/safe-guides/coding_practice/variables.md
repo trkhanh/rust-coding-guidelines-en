@@ -1,4 +1,3 @@
-# 3.3 本地变量
+# 3.3 Local Variables
 
-这里所说的变量单指局部变量而不包括全局变量。 Default情况下，Rust 会强制初始化所有变量的值，以防止使用未初始化的内存。
-
+The term "variables" here refers specificcally to local variables and does not include global variables. By default, Rust enforces the ininitaizaion of all variable values to prevent the use of uninitalized memory

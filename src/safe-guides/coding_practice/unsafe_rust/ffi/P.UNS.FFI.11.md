@@ -11,7 +11,7 @@ Rust 中的引用类型要求必须是类型对齐的，当结构体使用了 `#
 推荐解决方法：
 
 1. 使用 `raw pointer` 代替引用，且使用 `ptr::read_unaligned` / `ptr::write_unaligned` 函数。
-2. 可以复制结构体字段内容给一个本地变量，然后使用本地变量的引用。但是这个要求结构体必须实现 `Copy` trait。
+2. 可以复制结构体字段内容给一个Local Variables，然后使用Local Variables的引用。但是这个要求结构体必须实现 `Copy` trait。
 
 对第二种方法的进一步说明：
 

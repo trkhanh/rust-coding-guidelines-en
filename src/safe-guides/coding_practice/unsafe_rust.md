@@ -1,17 +1,15 @@
 # 3.19 Unsafe Rust
 
-Unsafe Rust 是 Safe Rust 的超集，意味着在 Unsafe Rust 中也会有 Safe Rust 的安全检查。但是 Unsafe Rust 中下面五件事是Safe Rust 的检查鞭长莫及的地方：
+Unsafe Rust is a superset of Safe Rust, meaning that Safe Rust's safety checks also exist within Unsafe Rust. However, the following five things in Unsafe Rust are beyond the reach of Safe Rust's checks:
 
-1. 解引用裸指针
-2. 调用 `unsafe`函数（C函数，编译器内部函数或原始分配器）
-3. 实现 `unsafe` trait
-4. 可变静态变量
-5. 访问  `union` 的字段
+1. Dereferencing raw pointers
+2. Calling `unsafe` functions (C functions, compiler intrinsics, or raw allocators)
+3. Implementing `unsafe` traits
+4. Mutable static variables
+5. Accessing fields of a `union`
 
-使用 Unsafe Rust 的时候，需要遵守一定的规范，这样可以避免未定义行为的发生。
+When using Unsafe Rust, certain conventions must be followed to avoid the occurrence of undefined behavior.
 
-关于 Unsafe Rust 下的一些专用术语可以查看 [Unsafe 代码术语指南](./unsafe_rust/glossary.md) 。
+For specialized terminology regarding Unsafe Rust, you can check the [Unsafe 代码术语指南](./unsafe_rust/glossary.md) .
 
-**Unsafe Rust 的语义：这是编译器无法保证安全的地方，需要程序员来保证安全。** 
-
-[Unsafe 代码术语指南](./unsafe_rust/glossary.md)
+**The semantics of Unsafe Rust: This is where the compiler cannot guarantee safety; the programmer must ensure safety.** [Unsafe 代码术语指南](./unsafe_rust/glossary.md)

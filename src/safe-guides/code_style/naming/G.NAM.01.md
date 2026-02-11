@@ -21,7 +21,7 @@ Rust 倾向于在“类型”级的结构中使用大驼峰（`UpperCamelCase`�
 | 通用构造函数（General constructors）    | `new` 或者 `with_more_details`                                                             |
 | 转换构造函数（Conversion constructors） | `from_some_other_type`                                                                     |
 | 宏（Macros）                            | `snake_case!`                                                                              |
-| 本地变量（Local variables）             | `snake_case`                                                                               |
+| Local Variables（Local variables）             | `snake_case`                                                                               |
 | 静态变量（Statics）                     | `SCREAMING_SNAKE_CASE`                                                                     |
 | 常量（Constants）                       | `SCREAMING_SNAKE_CASE`                                                                     |
 | 类型参数（Type parameters）             | 简明的 `UpperCamelCase` ，通常使用单个大写字母： `T`                                       |
